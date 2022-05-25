@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Autor;
 class AutorSeeder extends Seeder
 {
     /**
@@ -13,18 +13,14 @@ class AutorSeeder extends Seeder
      */
     public function run()
     {
-        $autor = array(
-            ['nombre' => "Marta Santés", 'foto' =>""],
-            ['nombre' => "Penelope Ward"],
-            ['nombre' => "Victoria Vílchez"],
-            ['nombre' => "Tessa Bailey"],
-            ['nombre' => "Julia Quinn"],
-            ['nombre' => "Jennifer L. Armentrout"]
-        );
+        $autores=array("Marta Santés", "Penelope Ward", "Victoria Vílchez", "Tessa Bailey", "Julia Quinn", "Jennifer L. Armentrout"); 
 
-        $n = count($autor);
+        $n = count($autores);
         for($i=0;$i<$n;$i++){
-            DB::table('autor')->insert($autor[$i]);
+            $autor = new Autor();
+            $autor -> nombre = $autores[$i];
+            $autor -> foto = ""+($i+1);
+            $autor->save();
         }
     }
 }

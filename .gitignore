@@ -1,7 +1,6 @@
 composer.lock
 bootstrap/cache/packages.php
 bootstrap/cache/services.php
-database/seeders/LibroSeeder.php
 vendor/autoload.php
 vendor/asm89/stack-cors/composer.json
 vendor/asm89/stack-cors/LICENSE
