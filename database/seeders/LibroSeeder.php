@@ -79,17 +79,20 @@ class LibroSeeder extends Seeder
         ]);
 
         DB::table('libro')->insert([
-            'titulo' => "Recuérdame, Alice",
-            'sinopsis' => "¿Por qué está tan mal si nos hace sentir tan vivos?
+            'titulo' => "El arte de engañar al karma",
+            'sinopsis' => "Una aspirante a actriz cansada de hacer castings...
 
-            Él olía a prohibición, olía a una noche de verano en algún lugar exótico, a frutas exquisitas que nunca había probado, olía a deseo, a vida. A amor del que duele... Era su alumno, un muchacho solitario adicto a los libros y a la música que apenas sonreía. Él había invadido sus sueños incluso antes de conocerle tras un violento accidente en el que su cabeza se estropeó, impidiéndole retener sus recuerdos. Él la hizo enloquecer. Él empezó a desearla. La deseó tanto y tan fuerte que sintió que deliraba. Pero eran profesora y alumno en el marco de un orfanato de la Bolonia de Italia en pleno 1980. No podían quererse. Estaba mal. Y aun así lo hicieron.
+            Un artista reconocido en plena crisis creativa...
             
-            Ahora Mario conoce a esa mujer, a sus sesenta y cinco años, que olvida sin remedio al amor de su vida y a sí misma. Mario, que sabe que su forma de amar también está bien, trata por todos los medios que recuerde. Entonces encuentra unas cintas de vídeo llenas de la vida de ella, en las que se cuenta a sí misma todo lo que luchó, todo lo que quiso a ese muchacho de pelo rizado y olor a vida.
-            ",
-            'precio' => 16.50,
+            Unos valiosos cuadros encontrados en un desván...
+            
+            Y el arte del engaño para cambiar las leyes del karma.
+            
+            Después de vender más de 3.000.000 de ejemplares de sus novelas, Elísabet Benavent vuelve con El arte de engañar al karma, una novela donde despliega su virtuosismo narrativo, la magia para crear historias, con un estilo lleno de risas y lágrimas, en una novela sorprendente, llena de belleza y arte en la que las mujeres dejan de ser musas para ser creadoras. Y volar alto. Por encima de cualquier expectativa.",
+            'precio' => 18.95,
             'foto' => "",
             'categoria_id' => 1,
-            'autor_id' => 2
+            'autor_id' => 7
         ]);
 
         DB::table('libro')->insert([

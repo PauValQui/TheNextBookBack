@@ -34,5 +34,8 @@ class AutorSeeder extends Seeder
         DB::table('autor')->insert([
             'nombre'=> "Jennifer L. Armentrout"
         ]);
+        DB::table('autor')->insert([
+            'nombre'=> "Elisabet Benavent"
+        ]);
     }
 }
