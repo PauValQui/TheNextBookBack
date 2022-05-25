@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Categoria;
+use DB;
 
 class CategoriaSeeder extends Seeder
 {
@@ -14,13 +15,18 @@ class CategoriaSeeder extends Seeder
      */
     public function run()
     {
-        $categorias=array('Romantica', 'Fantasia', 'Juvenil', 'Historica'); 
 
-        $n = count($categorias);
-        for($i=0;$i<$n;$i++){
-            $categoria = new Categoria();
-            $categoria -> tipo = $categoria[$i];
-            $categoria->save();
-        }
+        DB::table('categoria')->insert([
+            'tipo'=>"Romantica"
+        ]);
+        DB::table('categoria')->insert([
+            'tipo'=>"Fantasia"
+        ]);
+        DB::table('categoria')->insert([
+            'tipo'=>"Juvenil"
+        ]);
+        DB::table('categoria')->insert([
+            'tipo'=>"Historica"
+        ]);
     }
 }

@@ -9,7 +9,7 @@ class Autor extends Model
 {
     use HasFactory;
 
-    protected $table = "libreria";
+    protected $table = "autor";
 
     protected $fillable = ['nombre', 'libro_id'];
     protected $hidden = ['id'];

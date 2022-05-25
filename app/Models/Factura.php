@@ -9,7 +9,7 @@ class Factura extends Model
 {
     use HasFactory;
 
-    protected $table = "libreria";
+    protected $table = "factura";
 
     protected $fillable = ['precioTotal', 'fechaCompra', 'libro_id', 'usuario_id'];
     protected $hidden = ['id'];

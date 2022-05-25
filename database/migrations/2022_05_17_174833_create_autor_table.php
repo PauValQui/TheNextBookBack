@@ -16,7 +16,7 @@ class CreateAutorTable extends Migration
         Schema::create('autor', function (Blueprint $table) {
             $table->id()->autoIncrement()->unique();
             $table->string('nombre',200);
-            $table->longblob('foto');
+            $table->string('foto')->nullable();
             $table->bigInteger('libro_id')->references('id')->on('libro')->onDelete('cascade')->nullable();
 
             $table->timestamps();

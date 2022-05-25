@@ -18,7 +18,7 @@ class CreateLibroTable extends Migration
             $table->string('titulo',100);
             $table->text('sinopsis');
             $table->decimal('precio',$precision=8, $scale=2);
-            $table->longblob('foto');
+            $table->string('foto')->nullable();
             $table->bigInteger('categoria_id')->references('id')->on('categoria')->onDelete('cascade')->nullable();
             $table->bigInteger('autor_id')->references('id')->on('autor')->onDelete('cascade')->nullable();
 
@@ -33,7 +33,7 @@ class CreateLibroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_libro');
+        Schema::dropIfExists('libro');
     }
 }
 

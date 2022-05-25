@@ -9,7 +9,7 @@ class Valoracion extends Model
 {
     use HasFactory;
 
-    protected $table = "libreria";
+    protected $table = "valoracion";
 
     protected $fillable = ['titulo', 'puntuacion', 'comentario','libro_id','usuario_id'];
     protected $hidden = ['id'];
