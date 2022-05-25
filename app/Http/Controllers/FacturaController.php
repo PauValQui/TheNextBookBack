@@ -25,20 +25,20 @@ class FacturaController extends Controller
         return view('factura.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
     }
 
-    /*public function store(Request $request) Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
+    public function store(Request $request)// Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
     {
-        $factura = new Factura($request->all());  all()-> se encarga de cargar los datos al objeto $libro
-        $factura->save(); save()-> guardalos datos en la bd 
-        return redirect()->action([FacturaController::class, 'index']); retorna la vista del listado de libros.
+        $factura = new Factura($request->all());  //all()-> se encarga de cargar los datos al objeto $libro
+        $factura->save(); //save()-> guardalos datos en la bd 
+        return redirect()->action([FacturaController::class, 'index']);// retorna la vista del listado de libros.
     }
-    */
+    
 
-    public function showUsuarios($usuario_id){
+    public function showFacturaUsuarios($usuario_id){
         $factura = $this->factura->obtenerFacturasPorUsuario($usuario_id);
         return view('factura.ver', ['factura' => $factura]);
     }
 
-    public function showAutor($fecha){
+    public function showFacturaFecha($fecha){
         $factura = $this->libro->obtenerFacturasPorFecha($fecha);
         return view('factura.ver', ['factura' => $factura]);
     }

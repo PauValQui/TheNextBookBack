@@ -25,27 +25,11 @@ class LibroController extends Controller
         return view('libro.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
     }
 
-    /*public function store(Request $request) Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
+    public function store(Request $request) //Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
     {
-        $libro = new Libro($request->all());  all()-> se encarga de cargar los datos al objeto $libro
-        $libro->save(); save()-> guardalos datos en la bd 
-        return redirect()->action([LibroController::class, 'index']); retorna la vista del listado de libros.
-    }
-    */
-
-    public function showTitulo($titulo){
-        $libro = $this->libro->obtenerLibrosPorTitulo($titulo);
-        return view('libro.ver', ['libro' => $libro]);
-    }
-
-    public function showAutor($autor){
-        $libro = $this->libro->obtenerLibrosPorTitulo($autor);
-        return view('libro.ver', ['libro' => $libro]);
-    }
-
-    public function showCategoria($categoria){
-        $libro = $this->libro->obtenerLibrosPorTitulo($categoria);
-        return view('libro.ver', ['libro' => $libro]);
+        $libro = new Libro($request->all()); // all() se encarga de cargar los datos al objeto $libro
+        $libro->save(); //save() guardalos datos en la bd 
+        return redirect()->action([LibroController::class, 'index']); //retorna la vista del listado de libros.
     }
 
     public function editTitulo($titulo){
