@@ -8315,3 +8315,15 @@ bootstrap/cache/packages.php
 bootstrap/cache/services.php
 vendor/facade/ignition/resources/compiled/ignition.js
 vendor/facade/ignition/resources/compiled/index.html
+vendor/facade/ignition/resources/compiled/ignition.js
+vendor/facade/ignition/resources/compiled/index.html
+vendor/psr/log/src/AbstractLogger.php
+vendor/psr/log/src/InvalidArgumentException.php
+vendor/psr/log/src/LoggerAwareInterface.php
+vendor/psr/log/src/LoggerAwareTrait.php
+vendor/psr/log/src/LoggerInterface.php
+vendor/psr/log/src/LoggerTrait.php
+vendor/psr/log/src/LogLevel.php
+vendor/psr/log/src/NullLogger.php
+bootstrap/cache/services.php
+bootstrap/cache/packages.php

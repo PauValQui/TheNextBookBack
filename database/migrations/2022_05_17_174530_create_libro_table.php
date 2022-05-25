@@ -13,12 +13,12 @@ class CreateLibroTable extends Migration
      */
     public function up()
     {
-        Schema::create('_libro', function (Blueprint $table) {
+        Schema::create('libro', function (Blueprint $table) {
             $table->id()->autoincrement()->unique();
             $table->string('titulo',100);
             $table->text('sinopsis');
             $table->decimal('precio',$precision=8, $scale=2);
-            $table->string('foto');
+            $table->longblob('foto');
             $table->bigInteger('categoria_id')->references('id')->on('categoria')->onDelete('cascade')->nullable();
             $table->bigInteger('autor_id')->references('id')->on('autor')->onDelete('cascade')->nullable();
 

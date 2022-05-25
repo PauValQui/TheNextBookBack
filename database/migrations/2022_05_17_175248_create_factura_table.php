@@ -13,7 +13,7 @@ class CreateFacturaTable extends Migration
      */
     public function up()
     {
-        Schema::create('_factura', function (Blueprint $table) {
+        Schema::create('factura', function (Blueprint $table) {
             $table->id()->autoIncrement()->unique();
             $table->decimal('precioTotal');
             $table->date('fechaCompra');

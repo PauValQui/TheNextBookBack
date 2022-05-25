@@ -13,7 +13,7 @@ class CreateValoracionTable extends Migration
      */
     public function up()
     {
-        Schema::create('_valoracion', function (Blueprint $table) {
+        Schema::create('valoracion', function (Blueprint $table) {
             $table->id()->autoIncrement()->unique();
             $table->string('titulo');
             $table->integer('puntuacion');

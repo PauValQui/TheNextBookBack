@@ -13,10 +13,10 @@ class CreateAutorTable extends Migration
      */
     public function up()
     {
-        Schema::create('_autor', function (Blueprint $table) {
+        Schema::create('autor', function (Blueprint $table) {
             $table->id()->autoIncrement()->unique();
             $table->string('nombre',200);
-            $table->string('foto');
+            $table->longblob('foto');
             $table->bigInteger('libro_id')->references('id')->on('libro')->onDelete('cascade')->nullable();
 
             $table->timestamps();
