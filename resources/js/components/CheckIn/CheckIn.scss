@@ -1,0 +1,64 @@
+.Check{
+    display:flex;
+    justify-content: center;
+    margin: 4%;
+    font-size:15px;
+    color:#444444;
+
+    &__Form{
+        width:40%;
+
+        &__Datos{
+            
+            font-weight: bold;
+
+            &__Box{
+                height: 40px;
+                width: 100%;
+                background-color:#444444;
+                color:#fff;
+            }
+        }
+
+        &__Check{
+            display: flex;
+
+            &__CheckBox{
+                margin-top: 18px;
+            }
+        }
+
+        &__Enlace{
+           display: flex;
+
+            &__Registro{
+                color:#B5C78B;
+                margin-top: 1em;
+            }
+        }
+
+        &__Boton{
+            
+
+            &__Foto{
+                width: 180px;
+                height: 30px;
+                margin-top: 10px;
+                background-color: #444444;
+                color: #B5C78B;
+                font-weight: bold;
+                pointer-events: all;
+            }
+
+            &__Enviar{
+                float: right;
+                width: 180px;
+                height: 50px;
+                background-color: #444444;
+                color: #B5C78B;
+                font-weight: bold;
+                pointer-events: all;
+            }
+        }
+    }
+}
