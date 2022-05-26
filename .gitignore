@@ -8327,3 +8327,4 @@ vendor/psr/log/src/LogLevel.php
 vendor/psr/log/src/NullLogger.php
 bootstrap/cache/services.php
 bootstrap/cache/packages.php
+node_modules

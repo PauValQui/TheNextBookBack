@@ -1,0 +1,53 @@
+.Footer{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 25%;
+    background-color: #454142;
+
+    &__Box{
+        height: 80%;
+        display: flex;
+        justify-content: space-evenly;
+
+        &__Logo{
+            width: 12%;
+            margin-top: 10px ;
+        }
+
+        &__Contact{
+            width: 25%;
+            margin: 1%;
+            color:#B5C78B;
+
+            a:link, a:visited, a:active{
+                text-decoration: none;
+                color:#B5C78B;
+            }
+        }
+
+        &__RRSS{
+            color:#B5C78B;
+
+            .RRSS_BoxIcon{
+                height: 5%;
+
+                .BoxIcon__Icon{
+
+                    .fa-2{
+                        width: 3em;
+                        height: 3em;
+                    }
+                }
+            }
+        }
+    }
+
+    &__Copyright{
+        height: 10%;
+        text-align: center;
+        color: #B5C78B;
+    }
+}
