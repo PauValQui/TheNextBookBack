@@ -122,3 +122,7 @@ const Slider = () =>  {
 }
 
 export default Slider
+
+if (document.getElementByClass('Home')) {
+  ReactDOM.render(<Home />, document.getElementByClass('Home'));
+}
