@@ -1,4 +1,5 @@
 composer.lock
+node_modules
 bootstrap/cache/packages.php
 bootstrap/cache/services.php
 vendor/autoload.php
