@@ -12,6 +12,4 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Header/Header');
-require('./components/Home/Home');
-require('./components/Footer/Footer');
+

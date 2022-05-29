@@ -16,6 +16,3 @@ use App\Http\Controllers\LibroController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/', [LibroController::class, 'index']);
-Route::get('/', [AutorController::class, 'index']);
