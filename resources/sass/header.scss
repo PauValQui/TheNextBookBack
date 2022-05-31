@@ -40,9 +40,10 @@
         &__ShopCart{
             width: 7%;
             margin-top: 10px;
-            .bs-3{
-                width: 3em;
-                height: 4em;
+
+            .ShopCart__Link{
+                width: 50px;
+                height: 50px;
             }
         }
     }
