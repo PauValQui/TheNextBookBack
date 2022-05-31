@@ -11,7 +11,7 @@
     <!--Header-->
     <div className="Header">
         <div className="Header__FirstBox">
-            <img src='../../Img/Logo.jpeg' alt="logo" id="logo" className="Header__FirstBox__logo" />
+            <img src={logo} alt="logo" id="logo" className="Header__FirstBox__logo" />
             <div className="Header__FirstBox__Search">
               <input type="text" className="Search__Box" name='Search__Box' placeholder="¿Qué buscas?"/>
               <i class="fa-regular fa-magnifying-glass"></i>            
@@ -40,11 +40,11 @@
     </div>
 
     <!--Contenido-->
-    @yield('content')
+    <?php echo $__env->yieldContent('content'); ?>
     <!--Footer-->
     <div className="Footer">
         <div className="Footer__Box">
-            <img src='../../Img/Logo.jpeg' alt='Logo' id='Logo' className='Footer__Box__Logo'/>
+            <img src={logo} alt='Logo' id='Logo' className='Footer__Box__Logo'/>
             <div className='Footer__Box__Contact'>
                 <p>¿Tienes alguna duda?</p>
                 <a href='/'>Contactanos</a>
@@ -63,4 +63,4 @@
         </div>
     </div>
 </body>
-</html>
+</html><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/layout/base.blade.php ENDPATH**/ ?>
