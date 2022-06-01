@@ -44,7 +44,9 @@
     </div>
 
     <!--Contenido-->
-    @yield('content')
+    <div class="container">
+      @yield('content')
+    </div>
     <!--Footer-->
     <div class="Footer">
         <div class="Footer__Box">
