@@ -44,7 +44,9 @@
     </div>
 
     <!--Contenido-->
-    <?php echo $__env->yieldContent('content'); ?>
+    <div class="container">
+      <?php echo $__env->yieldContent('content'); ?>
+    </div>
     <!--Footer-->
     <div class="Footer">
         <div class="Footer__Box">

@@ -1,15 +1,15 @@
-@extends('layout/base')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="Slider">
         <button class="Slider__Button__Left"><img src='../../Img/IconosSVG/iconmonstr-arrow-left.svg' alt=""></i></button>
 
         <div class="Slider__Box">
-            @for ($i=1; $i <= 5; $i++)
+            <?php for($i=1; $i <= 5; $i++): ?>
                 <div class="Slider_Box_Item">
-                    <img src="/Img/Slider/Slider{{$i}}.png"/>
+                    <img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/>
                 </div>
-            @endfor
+            <?php endfor; ?>
         </div>
 
         <button class="Slider__Button__Right"><img src='../../Img/IconosSVG/iconmonstr-arrow-right.svg' alt=""></button>
@@ -21,4 +21,5 @@
 
     </div>
     <script src="js/home.js"></script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout/base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/home.blade.php ENDPATH**/ ?>

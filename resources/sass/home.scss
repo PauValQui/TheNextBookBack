@@ -1,0 +1,23 @@
+.Slider{
+    &__Box{
+        max-width: 1000px;
+        position:relative;
+        margin:auto;
+        
+        &__Item{
+            display: none;
+
+            img{
+                border-radius: 10px;
+                max-width: 100%;
+                height: 300px;
+                width: 75%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top:10px ;
+            }
+
+        }
+    }
+}
