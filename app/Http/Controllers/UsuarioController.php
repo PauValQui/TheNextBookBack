@@ -3,57 +3,59 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Libro;
+use App\Models\Usuario;
 
-class LibroController extends Controller
+class UsuarioController extends Controller
 {
-    protected $libro;
+    protected $usuario;
 
-    public function __construct(Libro $libro)
+    public function __construct(Usuario $usuario)
     {
-        $this->libro = $libro;
+        $this->usuario = $usuario;
     }
 
     public function index()
     {
-        $libro = $this->libro->obtenerLibros(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
-        return view('libro.lista', ['libro' => $libro]);
+        $usuario = $this->usuario->obtenerUsuario(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
+        return view('usuario.lista', ['usuario' => $usuario]);
     }
 
     public function create()
     {
-        return view('libro.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
+        return view('usuario.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
     }
 
-    public function store(Request $request) //Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
+    public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion
+                                            //       mandada desde un formulario.
     {
-        $libro = new Libro($request->all()); // all() se encarga de cargar los datos al objeto $libro
-        $libro->save(); //save() guardalos datos en la bd 
-        return redirect()->action([LibroController::class, 'index']); //retorna la vista del listado de libros.
+        $usuario = new Usuario($request->all());  //all()-> se encarga de cargar los datos al objeto $libro
+        $usuario->save();                         //save()-> guardalos datos en la bd 
+        return redirect()->action([UsuarioController::class, 'index']); //retorna la vista del listado de libros.
     }
+    
 
-    public function editTitulo($titulo){
-        $libro = $this->libro->obtenerLibrosPorTitulo($titulo);
-        return view('libro.editar', ['libro' => $libro]);
+    public function show(){
+        $usuario = $this->usuario->obtenerUsuario();
+        return view('usuario.ver', ['usuario' => $usuario]);
     }
 
     public function edit($id){
-        $libro = $this->libro->obtenerLibrosPorTitulo($id);
-        return view('libro.editar', ['libro' => $libro]);
+        $usuario = $this->usuario->obtenerUsuario($id);
+        return view('usuario.editar', ['usuario' => $usuario]);
     }
 
     public function update(Request $request, $id)
     {
-        $libro = Libro::find($id);
-        $libro->fill($request->all());
-        $libro->save();
-        return redirect()->action([LibroController::class, 'index']);
+        $usuario = Usuario::find($id);
+        $usuario->fill($request->all());
+        $usuario->save();
+        return redirect()->action([UsuarioController::class, 'index']);
     }
 
     public function destroy($id)
     {
-        $libro = Libro::find($id);
-        $libro->delete();
-        return redirect()->action([LibroController::class, 'index']);
+        $usuario = Usuario::find($id);
+        $usuario->delete();
+        return redirect()->action([UsuarioController::class, 'index']);
     }
 }

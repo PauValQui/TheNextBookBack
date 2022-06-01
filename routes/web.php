@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
+use App\Models\Libro;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,5 @@ use App\Http\Controllers\LibroController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [LibroController::class,'obtenerLibrosHome']);
 });

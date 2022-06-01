@@ -11,7 +11,7 @@ class Autor extends Model
 
     protected $table = "autor";
 
-    protected $fillable = ['nombre', 'libro_id'];
+    protected $fillable = ['nombre', 'foto'];
     protected $hidden = ['id'];
 
     public function obtenerAutores()

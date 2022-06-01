@@ -8,7 +8,7 @@
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/header.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/footer.css')); ?>" rel="stylesheet">
-    
+    <link href="<?php echo e(asset('css/home.css')); ?>" rel="stylesheet">
 </head>
 <body>
 

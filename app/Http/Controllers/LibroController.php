@@ -4,58 +4,87 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Libro;
+use Illuminate\Support\Facades\DB;
 
 class LibroController extends Controller
 {
-    protected $usuario;
+    protected $libro;
 
-    public function __construct(Usuario $usuario)
+    public function __construct(Libro $libro)
     {
-        $this->usuario = $usuario;
+        $this->libro = $libro;
     }
 
-    public function index()
+    public function obtenerLibrosHome()
     {
-        $usuario = $this->usuario->obtenerUsuario(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
-        return view('usuario.lista', ['usuario' => $usuario]);
+        $libro = $this->libro->obtenerLibros(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
+        $aux=0;
+
+        foreach ($libro as $cadaLibro) {
+            $autor = $this -> obtenerAutor($cadaLibro->autor_id)-> nombre;
+            $autorFoto = $this -> obtenerAutor($cadaLibro->autor_id)-> foto;
+            $categoria = $this -> obtenerCategoria($cadaLibro-> categoria_id);
+
+            $libros[$aux]= [$cadaLibro->titulo, $cadaLibro->foto, $autor, $autorFoto, $categoria];
+            $aux= $aux+1;
+        }
+
+        return view('home', ['libro' => $libros]);
     }
+
+    public function obtenerAutor($id){
+        $autor = DB::table('autor')
+        ->select('*')
+        ->where('id', '=', $id)
+        ->get();
+
+        return $autor;
+    }
+
+    public function obtenerCategoria($id){
+        $categoria = DB::table('categoria')
+        ->select('tipo')
+        ->where('id', '=', $id)
+        ->get();
+
+        return $categoria;
+    }
+
 
     public function create()
     {
-        return view('usuario.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
+        return view('libro.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
     }
 
-    public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion
-                                            //       mandada desde un formulario.
+    public function store(Request $request) //Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
     {
-        $usuario = new Usuario($request->all());  //all()-> se encarga de cargar los datos al objeto $libro
-        $usuario->save();                         //save()-> guardalos datos en la bd 
-        return redirect()->action([UsuarioController::class, 'index']); //retorna la vista del listado de libros.
+        $libro = new Libro($request->all()); // all() se encarga de cargar los datos al objeto $libro
+        $libro->save(); //save() guardalos datos en la bd 
+        return redirect()->action([LibroController::class, 'index']); //retorna la vista del listado de libros.
     }
-    
 
-    public function show(){
-        $usuario = $this->usuario->obtenerUsuario();
-        return view('usuario.ver', ['usuario' => $usuario]);
+    public function editTitulo($titulo){
+        $libro = $this->libro->obtenerLibrosPorTitulo($titulo);
+        return view('libro.editar', ['libro' => $libro]);
     }
 
     public function edit($id){
-        $usuario = $this->usuario->obtenerUsuario($id);
-        return view('usuario.editar', ['usuario' => $usuario]);
+        $libro = $this->libro->obtenerLibrosPorTitulo($id);
+        return view('libro.editar', ['libro' => $libro]);
     }
 
     public function update(Request $request, $id)
     {
-        $usuario = Usuario::find($id);
-        $usuario->fill($request->all());
-        $usuario->save();
-        return redirect()->action([UsuarioController::class, 'index']);
+        $libro = Libro::find($id);
+        $libro->fill($request->all());
+        $libro->save();
+        return redirect()->action([LibroController::class, 'index']);
     }
 
     public function destroy($id)
     {
-        $usuario = Usuario::find($id);
-        $usuario->delete();
-        return redirect()->action([UsuarioController::class, 'index']);
+        $libro = Libro::find($id);
+        $libro->delete();
+        return redirect()->action([LibroController::class, 'index']);
     }
 }

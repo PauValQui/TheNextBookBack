@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Autor;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class AutorSeeder extends Seeder
 {
@@ -17,25 +17,32 @@ class AutorSeeder extends Seeder
     {
 
         DB::table('autor')->insert([
-            'nombre'=> "Marta Santés"
+            'nombre'=> "Marta Santés",
+            'foto'=>""
         ]);
         DB::table('autor')->insert([
-            'nombre'=> "Penelope Ward"
+            'nombre'=> "Penelope Ward",
+            'foto'=>""
         ]);
         DB::table('autor')->insert([
-            'nombre'=> "Victoria Vílchez"
+            'nombre'=> "Victoria Vílchez",
+            'foto'=>""
         ]);
         DB::table('autor')->insert([
-            'nombre'=> "Tessa Bailey"
+            'nombre'=> "Tessa Bailey",
+            'foto'=>""
         ]);
         DB::table('autor')->insert([
-            'nombre'=> "Julia Quinn"
+            'nombre'=> "Julia Quinn",
+            'foto'=>""
         ]);
         DB::table('autor')->insert([
-            'nombre'=> "Jennifer L. Armentrout"
+            'nombre'=> "Jennifer L. Armentrout",
+            'foto'=>""
         ]);
         DB::table('autor')->insert([
-            'nombre'=> "Elisabet Benavent"
+            'nombre'=> "Elisabet Benavent",
+            'foto'=>""
         ]);
     }
 }

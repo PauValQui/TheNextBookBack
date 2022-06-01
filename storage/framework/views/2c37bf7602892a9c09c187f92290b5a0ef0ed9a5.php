@@ -6,7 +6,7 @@
 
         <div class="Slider__Box">
             <?php for($i=1; $i <= 5; $i++): ?>
-                <div class="Slider_Box_Item">
+                <div class="Slider__Box__Item">
                     <img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/>
                 </div>
             <?php endfor; ?>

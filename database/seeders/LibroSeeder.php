@@ -3,8 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use DB;
-use App\Models\Libro;
+use Illuminate\Support\Facades\DB;
 
 class LibroSeeder extends Seeder
 {

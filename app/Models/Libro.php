@@ -11,7 +11,7 @@ class Libro extends Model
 
     protected $table = "libro";
 
-    protected $fillable = ['titulo', 'sinopsis', 'precio', 'categoria_id', 'autor_id', 'valoracion_id'];
+    protected $fillable = ['titulo', 'sinopsis', 'precio', 'foto', 'categoria_id', 'autor_id'];
     protected $hidden = ['id'];
 
     public function obtenerLibros()

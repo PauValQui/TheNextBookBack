@@ -1,6 +1,5 @@
 .Slider{
     &__Box{
-        max-width: 1000px;
         position:relative;
         margin:auto;
         
@@ -9,9 +8,7 @@
 
             img{
                 border-radius: 10px;
-                max-width: 100%;
-                height: 300px;
-                width: 75%;
+                height: 395px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
