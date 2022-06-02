@@ -18,11 +18,9 @@ class LibroResource extends JsonResource
     {
         return [
             'titulo'=> $this->titulo,
-            'sinopsis'=> $this->sinopsis,
-            'precio'=> $this->precio,
             'foto'=> $this->foto,
             'autor'=> new AutorResource($this->autor),
-            'categoria'=> new CategoriaReosurce($this -> categoria)
+            'categoria'=> new CategoriaResource($this -> categoria)
         ];
     }
 }

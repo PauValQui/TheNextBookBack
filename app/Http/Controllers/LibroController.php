@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\LibroCollection;
+use App\Http\Resources\LibroResource;
 use Illuminate\Http\Request;
 use App\Models\Libro;
-use Illuminate\Support\Facades\DB;
+
 
 class LibroController extends Controller
 {
@@ -16,51 +18,42 @@ class LibroController extends Controller
     }
 
     public function index()
-    {
-        $libro = $this->libro->obtenerLibros(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
+    {   
+        $longitud = count(Libro::all());
+        $libros=array();
+
+        for ($i=0; $i < $longitud; $i++) {
+
+            $libros[$i] = new LibroResource(Libro::obtenerLibrosPorId($i+1));
+        }
+
+        $libros = array_reverse($libros);
+
+        return view('home', ['libro' => $libros]);
+
+        /*
+        $alumnos = $this->alumnos->obtenerAlumnos();
+        return view('alumnos.lista', ['alumnos' => $alumnos]);
         
-        $libros = LibroCollection($libro);
-
-        return $libro;
-
-        /*  $aux=0;
+        $aux=0;
         $libros = array();
+        $data=[];
 
         foreach ($libro as $cadaLibro) {
-            $autor = $this -> obtenerAutor($cadaLibro->autor_id)-> nombre;
-            $autorFoto = $this -> obtenerAutor($cadaLibro->autor_id)-> foto;
+            $autor = $this -> obtenerAutor($cadaLibro->autor_id);
             $categoria = $this -> obtenerCategoria($cadaLibro-> categoria_id);
 
-            $libros[$aux]= [$cadaLibro->titulo, $cadaLibro->foto, $autor, $autorFoto, $categoria];
+            $data[$aux]= [
+                'titulo' => $cadaLibro->titulo, 
+                'foto' =>$cadaLibro->foto, 
+                'autor' =>$autor->nombre, 
+                'categoria' =>$categoria
+            ];
             $aux= $aux+1;
         }
 
-        return view('home', $libros->toJson());*/
-    }
-
-    /*public function obtenerAutor($id){
-        $autor = DB::table('autor')
-        ->select('*')
-        ->where('id', '=', $id)
-        ->get();
-
-        return $autor;
-    }
-
-    public function obtenerCategoria($id){
-        $categoria = DB::table('categoria')
-        ->select('tipo')
-        ->where('id', '=', $id)
-        ->get();
-
-        return $categoria;
-    }*/
-
-    public function store(Request $request) //Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
-    {
-        $libro = new Libro($request->all()); // all() se encarga de cargar los datos al objeto $libro
-        $libro->save(); //save() guardalos datos en la bd 
-        return redirect()->action([LibroController::class, 'index']); //retorna la vista del listado de libros.
+        return view('home', $libros->toJson());
+        return view('home', response()->json($data, 200, [])); */    
     }
 
     public function editTitulo($titulo){

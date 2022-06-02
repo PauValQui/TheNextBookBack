@@ -16,17 +16,19 @@ class LibroSeeder extends Seeder
     {
         // Creación usando DB
         DB::table('libro')->insert([
-            'titulo' => "Recuérdame, Alice",
-            'sinopsis' => "¿Por qué está tan mal si nos hace sentir tan vivos?
+            'titulo' => "El duque y yo",
+            'sinopsis' => "Todos parecían divertirse en aquel baile que reunía a lo más selecto de la sociedad londinense. Todos, excepto ellos dos. Daphne, una hermosa joven agobiada por su madre, y Simon, el huraño nuevo duque de Hastings, tenían el mismo problema: la continua presión para que encontraran pareja. Al conocerse, se les ocurrió el plan perfecto: fingir un compromiso que los liberara de más agobios. Pero no sería sencillo, ya que el hermano de Daphne, amigo de Simon, no es fácil de engañar, ni tampoco lo son las avezadas damas de la alta sociedad. Aunque lo que complicará de verdad las cosas será la aparición de un elemento que no estaba previsto en este juego a dos bandas: el amor.
 
-            Él olía a prohibición, olía a una noche de verano en algún lugar exótico, a frutas exquisitas que nunca había probado, olía a deseo, a vida. A amor del que duele... Era su alumno, un muchacho solitario adicto a los libros y a la música que apenas sonreía. Él había invadido sus sueños incluso antes de conocerle tras un violento accidente en el que su cabeza se estropeó, impidiéndole retener sus recuerdos. Él la hizo enloquecer. Él empezó a desearla. La deseó tanto y tan fuerte que sintió que deliraba. Pero eran profesora y alumno en el marco de un orfanato de la Bolonia de Italia en pleno 1980. No podían quererse. Estaba mal. Y aun así lo hicieron.
+            IDEARON UN PLAN PERFECTO EN EL QUE EL AMOR NO TENÍA CABIDA...
+            Desde que fue presentada en sociedad, Daphne no tiene un momento de respiro. La culpa es de su madre, a la que adora, pero que está obsesionada con encontrarle un marido cuanto antes. Lo peor del caso es que los hombres razonablemente deseables no están interesados, y los que sí lo están son unos incansables pesados de los que tiene que librarse... incluso a golpes. Por eso acepta encantada la idea del duque de Hastings de fingir un noviazgo que ahuyente a los pretendientes. Aunque quizá también tenga algo que ver el hecho de que el joven duque comienza a resultarle cada vez más seductor.
             
-            Ahora Mario conoce a esa mujer, a sus sesenta y cinco años, que olvida sin remedio al amor de su vida y a sí misma. Mario, que sabe que su forma de amar también está bien, trata por todos los medios que recuerde. Entonces encuentra unas cintas de vídeo llenas de la vida de ella, en las que se cuenta a sí misma todo lo que luchó, todo lo que quiso a ese muchacho de pelo rizado y olor a vida.
+            PERO HAY COSAS DE LAS QUE ES IMPOSIBLE ESCAPAR
+            Marcado por una infancia llena de soledad y resentimiento, Simon Basset, el nuevo duque de Hastings, no quiere saber nada de la vida social de Londres ni, desde luego, de los intentos de las elegantes damas de \"cazarlo\" como marido para sus hijas. Cuando conoce a Daphne, cree haber encontrado el plan perfecto: un compromiso ficticio que mantenga alejadas a las pretendientes que lo agobian. Y cuando la atracción fingida comienza a convertirse en algo demasiado real, Simon deberá enfrentarse a los fantasmas del pasado que le impiden disfrutar la felicidad que el destino pone al alcance de su mano.
             ",
-            'precio' => 16.50,
+            'precio' => 15.00,
             'foto' => "",
             'categoria_id' => 1,
-            'autor_id' => 1
+            'autor_id' => 5
         ]);
 
         DB::table('libro')->insert([
@@ -95,36 +97,6 @@ class LibroSeeder extends Seeder
         ]);
 
         DB::table('libro')->insert([
-            'titulo' => "Un linaje oscuro",
-            'sinopsis' => "En 1692, una serie de personas fueron arrestadas y acusadas de practicar brujería en Salem. Tras los juicios que se llevaron a cabo, se condenó a veintinueve de ellas y, finalmente, diecinueve murieron ahorcadas. Aunque nadie sabía que, en realidad, los que propiciaron las acusaciones eran brujos blancos, y los condenados a la horca pertenecían a su vez a linajes de brujos oscuros. Hasta ese momento, los aquelarres de ambos bandos habían convivido en equilibro.
-
-            Muy pronto se crearían dos escuelas: Abbot, la academia a la que las familias de brujos blancos enviaban a sus descendientes para aprender todo lo relacionado con la magia de creación, y Ravenswood, aquella en la cual estudiaban los brujos entregados a la oscuridad.
-            
-            Danielle Good es una excepción. Ella es una bruja blanca a pesar de que su antepasada, Sarah Good, fue juzgada y condenada siglos atrás. Aunque su estancia en Abbot debería durar al menos un año más, hasta los diecinueve, está cansada de vivir encerrada entre sus muros. Huérfana de madre y con un padre que apenas le presta atención, decide huir de la escuela acompañada por Dith, su familiar, la única persona que siempre ha permanecido a su lado.
-            
-            Pero su intento de huida no sale como había planeado y Danielle termina en el único lugar que jamás tendría que haber pisado: Ravenswood. En territorio desconocido y peligroso, Danielle va a descubrir que los brujos oscuros no son los únicos que guardan secretos. Que la luz, en ocasiones, también necesita de oscuridad, y que el equilibrio que una vez se rompió tiene que volver a restablecerse antes de que sea demasiado tarde para todos.
-            ",
-            'precio' => 19.00,
-            'foto' => "",
-            'categoria_id' => 2,
-            'autor_id' => 3
-        ]);
-
-        DB::table('libro')->insert([
-            'titulo' => "Sucedió un verano",
-            'sinopsis' => "Piper Bellinger es una influyente del mundo de la moda y su reputación de alocada hace que la persigan los paparazzi. Tras acabar en el calabozo por organizar una fiesta ilegal con demasiado champán en la azotea de un hotel, su padrastro decide que esa es la gota que colma el vaso. De modo que la deja sin dinero y para que aprenda lo que es la responsabilidad, la envía… al estado de Washington, donde acabará regentando el bar de su difunto padre junto con su hermana.
-
-            Piper no lleva ni cinco minutos en Westport cuando conoce a Brendan, un corpulento y barbudo capitán de barco, que cree que no durará ni una semana lejos de Beverly Hills. ¿Qué pasa si es una negada con las matemáticas y si la idea de dormir en un piso cochambroso con literas le da escalofríos? Tan malo no puede ser, ¿verdad? Está decidida a demostrarle a su padrastro, y también a ese capitán de barco tan guapo y gruñón, que es más que una cara bonita.
-            
-            El problema es que está en un pueblo pequeño y se cruza con Brendan cada dos por tres. La extrovertida reina de las fiestas y el pescador gruñón son polos opuestos, pero la química que surge entre ellos es innegable. Piper no quiere distracciones, ni mucho menos sentir algo por un hombre que se pasa semanas faenando en el mar. Sin embargo, a medida que reconecta con su pasado y empieza a sentirse como en casa en Westport, empieza a plantearse si la fría y glamurosa vida que ha llevado hasta el momento es la que desea de verdad. Aunque siente la llamada de Los Ángeles, tal vez Brendan y ese pueblo lleno de recuerdos hayan conquistado su corazón.
-            ",
-            'precio' => 19.00,
-            'foto' => "",
-            'categoria_id' => 1,
-            'autor_id' => 4
-        ]);
-
-        DB::table('libro')->insert([
             'titulo' => "Cómo atrapar a una heredera",
             'sinopsis' => "Hasta que llegue a la mayoría de edad, la bella Caroline Trent vive a merced de Oliver Prewitt, su codicioso tutor, y de su repulsivo hijo Percy. Y justo cuando está a punto de alcanzar esa tan ansiada libertad, Percy intenta seducirla violentamente. Caroline le dispara y huye. Asustada, decide esconderse hasta la fecha en que pueda tomar legítima posesión de sus bienes. Pero no le será tan fácil; el apuesto Blake Ravenscroft la confunde con una espía de Prewitt y la secuestra. Al darse cuenta de la equivocación, ofrecerá refugio a la joven hasta que ella pueda regresar a su finca. No es fácil la convivencia entre una chica con temperamento y un hombre que está acostumbrado a que sus órdenes se cumplan. Pero las aparentes diferencias no impedirán el inevitable surgimiento de la pasión, que tal vez se convierta en un amor para toda la vida.",
             'precio' => 16.50,
@@ -174,19 +146,47 @@ class LibroSeeder extends Seeder
         ]);
 
         DB::table('libro')->insert([
-            'titulo' => "El duque y yo",
-            'sinopsis' => "Todos parecían divertirse en aquel baile que reunía a lo más selecto de la sociedad londinense. Todos, excepto ellos dos. Daphne, una hermosa joven agobiada por su madre, y Simon, el huraño nuevo duque de Hastings, tenían el mismo problema: la continua presión para que encontraran pareja. Al conocerse, se les ocurrió el plan perfecto: fingir un compromiso que los liberara de más agobios. Pero no sería sencillo, ya que el hermano de Daphne, amigo de Simon, no es fácil de engañar, ni tampoco lo son las avezadas damas de la alta sociedad. Aunque lo que complicará de verdad las cosas será la aparición de un elemento que no estaba previsto en este juego a dos bandas: el amor.
+            'titulo' => "Un linaje oscuro",
+            'sinopsis' => "En 1692, una serie de personas fueron arrestadas y acusadas de practicar brujería en Salem. Tras los juicios que se llevaron a cabo, se condenó a veintinueve de ellas y, finalmente, diecinueve murieron ahorcadas. Aunque nadie sabía que, en realidad, los que propiciaron las acusaciones eran brujos blancos, y los condenados a la horca pertenecían a su vez a linajes de brujos oscuros. Hasta ese momento, los aquelarres de ambos bandos habían convivido en equilibro.
 
-            IDEARON UN PLAN PERFECTO EN EL QUE EL AMOR NO TENÍA CABIDA...
-            Desde que fue presentada en sociedad, Daphne no tiene un momento de respiro. La culpa es de su madre, a la que adora, pero que está obsesionada con encontrarle un marido cuanto antes. Lo peor del caso es que los hombres razonablemente deseables no están interesados, y los que sí lo están son unos incansables pesados de los que tiene que librarse... incluso a golpes. Por eso acepta encantada la idea del duque de Hastings de fingir un noviazgo que ahuyente a los pretendientes. Aunque quizá también tenga algo que ver el hecho de que el joven duque comienza a resultarle cada vez más seductor.
+            Muy pronto se crearían dos escuelas: Abbot, la academia a la que las familias de brujos blancos enviaban a sus descendientes para aprender todo lo relacionado con la magia de creación, y Ravenswood, aquella en la cual estudiaban los brujos entregados a la oscuridad.
             
-            PERO HAY COSAS DE LAS QUE ES IMPOSIBLE ESCAPAR
-            Marcado por una infancia llena de soledad y resentimiento, Simon Basset, el nuevo duque de Hastings, no quiere saber nada de la vida social de Londres ni, desde luego, de los intentos de las elegantes damas de \"cazarlo\" como marido para sus hijas. Cuando conoce a Daphne, cree haber encontrado el plan perfecto: un compromiso ficticio que mantenga alejadas a las pretendientes que lo agobian. Y cuando la atracción fingida comienza a convertirse en algo demasiado real, Simon deberá enfrentarse a los fantasmas del pasado que le impiden disfrutar la felicidad que el destino pone al alcance de su mano.
+            Danielle Good es una excepción. Ella es una bruja blanca a pesar de que su antepasada, Sarah Good, fue juzgada y condenada siglos atrás. Aunque su estancia en Abbot debería durar al menos un año más, hasta los diecinueve, está cansada de vivir encerrada entre sus muros. Huérfana de madre y con un padre que apenas le presta atención, decide huir de la escuela acompañada por Dith, su familiar, la única persona que siempre ha permanecido a su lado.
+            
+            Pero su intento de huida no sale como había planeado y Danielle termina en el único lugar que jamás tendría que haber pisado: Ravenswood. En territorio desconocido y peligroso, Danielle va a descubrir que los brujos oscuros no son los únicos que guardan secretos. Que la luz, en ocasiones, también necesita de oscuridad, y que el equilibrio que una vez se rompió tiene que volver a restablecerse antes de que sea demasiado tarde para todos.
             ",
-            'precio' => 15.00,
+            'precio' => 19.00,
+            'foto' => "",
+            'categoria_id' => 2,
+            'autor_id' => 3
+        ]);
+
+        DB::table('libro')->insert([
+            'titulo' => "Recuérdame, Alice",
+            'sinopsis' => "¿Por qué está tan mal si nos hace sentir tan vivos?
+
+            Él olía a prohibición, olía a una noche de verano en algún lugar exótico, a frutas exquisitas que nunca había probado, olía a deseo, a vida. A amor del que duele... Era su alumno, un muchacho solitario adicto a los libros y a la música que apenas sonreía. Él había invadido sus sueños incluso antes de conocerle tras un violento accidente en el que su cabeza se estropeó, impidiéndole retener sus recuerdos. Él la hizo enloquecer. Él empezó a desearla. La deseó tanto y tan fuerte que sintió que deliraba. Pero eran profesora y alumno en el marco de un orfanato de la Bolonia de Italia en pleno 1980. No podían quererse. Estaba mal. Y aun así lo hicieron.
+            
+            Ahora Mario conoce a esa mujer, a sus sesenta y cinco años, que olvida sin remedio al amor de su vida y a sí misma. Mario, que sabe que su forma de amar también está bien, trata por todos los medios que recuerde. Entonces encuentra unas cintas de vídeo llenas de la vida de ella, en las que se cuenta a sí misma todo lo que luchó, todo lo que quiso a ese muchacho de pelo rizado y olor a vida.
+            ",
+            'precio' => 16.50,
             'foto' => "",
             'categoria_id' => 1,
-            'autor_id' => 5
+            'autor_id' => 1
+        ]);
+
+        DB::table('libro')->insert([
+            'titulo' => "Sucedió un verano",
+            'sinopsis' => "Piper Bellinger es una influyente del mundo de la moda y su reputación de alocada hace que la persigan los paparazzi. Tras acabar en el calabozo por organizar una fiesta ilegal con demasiado champán en la azotea de un hotel, su padrastro decide que esa es la gota que colma el vaso. De modo que la deja sin dinero y para que aprenda lo que es la responsabilidad, la envía… al estado de Washington, donde acabará regentando el bar de su difunto padre junto con su hermana.
+
+            Piper no lleva ni cinco minutos en Westport cuando conoce a Brendan, un corpulento y barbudo capitán de barco, que cree que no durará ni una semana lejos de Beverly Hills. ¿Qué pasa si es una negada con las matemáticas y si la idea de dormir en un piso cochambroso con literas le da escalofríos? Tan malo no puede ser, ¿verdad? Está decidida a demostrarle a su padrastro, y también a ese capitán de barco tan guapo y gruñón, que es más que una cara bonita.
+            
+            El problema es que está en un pueblo pequeño y se cruza con Brendan cada dos por tres. La extrovertida reina de las fiestas y el pescador gruñón son polos opuestos, pero la química que surge entre ellos es innegable. Piper no quiere distracciones, ni mucho menos sentir algo por un hombre que se pasa semanas faenando en el mar. Sin embargo, a medida que reconecta con su pasado y empieza a sentirse como en casa en Westport, empieza a plantearse si la fría y glamurosa vida que ha llevado hasta el momento es la que desea de verdad. Aunque siente la llamada de Los Ángeles, tal vez Brendan y ese pueblo lleno de recuerdos hayan conquistado su corazón.
+            ",
+            'precio' => 19.00,
+            'foto' => "",
+            'categoria_id' => 1,
+            'autor_id' => 4
         ]);
     }
 }

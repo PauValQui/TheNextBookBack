@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
 use App\Http\Resources\LibroCollection;
+use App\Http\Resources\LibroResource;
+use App\Models\Libro;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,4 @@ use App\Http\Resources\LibroCollection;
 |
 */
 
-Route::get('/', function(){
-    return LibroCollection(UserController::class, 'index');
-});  
+Route::get('/', [LibroController::class, 'index']); 

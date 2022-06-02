@@ -13,3 +13,16 @@
   margin-right: auto;
   margin-top: 10px;
 }
+
+.Novedades__BoxTitulo {
+  width: 100%;
+  border-top: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+  font-size: 5px;
+  color: #454142;
+}
+.Novedades__BoxLibro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

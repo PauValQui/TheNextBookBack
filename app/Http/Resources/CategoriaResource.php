@@ -15,7 +15,7 @@ class CategoriaResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'tipo'-> $this->tipo
+            'tipo' => $this -> tipo
         ];
     }
 }

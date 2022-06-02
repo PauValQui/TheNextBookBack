@@ -18,3 +18,55 @@
         }
     }
 }
+
+.Novedades{
+    
+
+    &__BoxTitulo{
+        width: 100%;
+        border-top:1px solid #DEDEDE;
+        border-bottom: 1px solid #DEDEDE;
+        font-size: 5px;
+        color:#454142;
+    }
+
+    &__BoxLibro{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        &__Img{
+            
+            img{
+
+            }
+        }
+
+        &__Titulo{
+
+        }
+
+        &__Autor{
+
+        }
+
+        &__BoxCategoria{
+
+            a{
+
+            }
+        }
+    }
+}
+
+
+.Autores{
+    &__Box{
+        &__Img{
+
+        }
+        &__Autor{
+
+        }
+    }
+}

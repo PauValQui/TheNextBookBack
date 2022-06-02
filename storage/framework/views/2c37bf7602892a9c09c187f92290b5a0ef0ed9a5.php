@@ -15,7 +15,20 @@
         <button class="Slider__Button__Right"><img src='../../Img/IconosSVG/iconmonstr-arrow-right.svg' alt=""></button>
     </div>
     <div class="Novedades">
+        <div class="Novedades__BoxTitulo">
+            <p>--Últimas Novedades--</p>
+        </div>
 
+        <?php for($i=0; $i<4; $i++): ?>
+            <div class="Novedades__BoxLibro">
+                <div class="Novedades__BoxLibro__Img">
+                    <img src="<?php echo e($libro[$i]->foto); ?>" />
+                    <p><?php echo e($libro[$i]->titulo); ?></p>
+                </div>
+            </div>
+        <?php endfor; ?>
+        
+        
     </div>
     <div class="Autores">
 
