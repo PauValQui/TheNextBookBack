@@ -15,10 +15,16 @@ class LibroController extends Controller
         $this->libro = $libro;
     }
 
-    public function obtenerLibrosHome()
+    public function index()
     {
         $libro = $this->libro->obtenerLibros(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
-        $aux=0;
+        
+        $libros = LibroCollection($libro);
+
+        return $libro;
+
+        /*  $aux=0;
+        $libros = array();
 
         foreach ($libro as $cadaLibro) {
             $autor = $this -> obtenerAutor($cadaLibro->autor_id)-> nombre;
@@ -29,10 +35,10 @@ class LibroController extends Controller
             $aux= $aux+1;
         }
 
-        return view('home', ['libro' => $libros]);
+        return view('home', $libros->toJson());*/
     }
 
-    public function obtenerAutor($id){
+    /*public function obtenerAutor($id){
         $autor = DB::table('autor')
         ->select('*')
         ->where('id', '=', $id)
@@ -48,13 +54,7 @@ class LibroController extends Controller
         ->get();
 
         return $categoria;
-    }
-
-
-    public function create()
-    {
-        return view('libro.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
-    }
+    }*/
 
     public function store(Request $request) //Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
     {

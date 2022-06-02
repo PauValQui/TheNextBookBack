@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
-use App\Models\Libro;
+use App\Http\Resources\LibroCollection;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,6 @@ use App\Models\Libro;
 |
 */
 
-Route::get('/', function () {
-    return view('home', [LibroController::class,'obtenerLibrosHome']);
-});
+Route::get('/', function(){
+    return LibroCollection(UserController::class, 'index');
+});  

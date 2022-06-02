@@ -28,4 +28,8 @@ class Autor extends Model
     {
         return Autor::find($id);
     }
+
+    public function libros(){
+        return $this->hasMany(Libro::class);
+    }
 }

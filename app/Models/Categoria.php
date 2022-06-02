@@ -28,4 +28,8 @@ class Categoria extends Model
     {
         return Categoria::find($id);
     }
+
+    public function libros(){
+        return $this->hasMany(Libro::class);
+    }
 }
