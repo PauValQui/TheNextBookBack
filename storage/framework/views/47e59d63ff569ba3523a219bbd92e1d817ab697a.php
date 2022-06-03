@@ -6,7 +6,7 @@
 
         <div class="Slider__Box">
             <?php for($i=1; $i <= 5; $i++): ?>
-                <div class="Slider_Box_Item">
+                <div class="Slider__Box__Item">
                     <img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/>
                 </div>
             <?php endfor; ?>
@@ -15,10 +15,39 @@
         <button class="Slider__Button__Right"><img src='../../Img/IconosSVG/iconmonstr-arrow-right.svg' alt=""></button>
     </div>
     <div class="Novedades">
-
+        <div class="Novedades__BoxTitulo">
+            <p>--Últimas Novedades--</p>
+        </div>
+        <div class="Novedades__BoxLibros">
+            <?php for($i=0; $i<4; $i++): ?>
+            <div class="Novedades__BoxLibros__Libro">
+                <div class="Novedades__BoxLibros__Libro__Img">
+                    <img src="<?php echo e($libro[$i]->foto); ?>" />
+                </div>
+                <a class="Novedades__BoxLibros__Libro__Titulo"><?php echo e($libro[$i]->titulo); ?></a>
+                <a class="Novedades__BoxLibros__Libro__Autor"><?php echo e($libro[$i]->autor->nombre); ?></a>
+                <div class="Novedades__BoxLibros__Libro__BoxCategoria">
+                    <a><?php echo e($libro[$i]->categoria->tipo); ?></a>
+                </div>
+            </div>
+        <?php endfor; ?>
+        </div>
+        
     </div>
     <div class="Autores">
-
+        <div class="Autores__Titulo">
+            <p>--Autores--</p>
+        </div>
+        <div class="Autores__Box">
+            <?php for($i=0; $i<3; $i++): ?>
+                <div class="Autores__Box__Autor">
+                    <div class="Autores__Box__Autor__Img">
+                        <img src="<?php echo e($libro[$i]->autor->foto); ?>" />
+                    </div>
+                    <a class="Autores__Box__Autor__Nombre"><?php echo e($libro[$i]->autor->nombre); ?></a>
+                </div>
+            <?php endfor; ?>
+        </div>
     </div>
     <script src="js/home.js"></script>
 <?php $__env->stopSection(); ?>

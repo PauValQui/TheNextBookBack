@@ -26,34 +26,59 @@
         width: 100%;
         border-top:1px solid #DEDEDE;
         border-bottom: 1px solid #DEDEDE;
-        font-size: 5px;
+        font-size: 30px;
+        text-align: center;
         color:#454142;
     }
 
-    &__BoxLibro{
-        display:flex;
-        justify-content: center;
-        align-items: center;
+    &__BoxLibros{
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 2%;
 
-        &__Img{
-            
-            img{
 
+        &__Libro{
+            width: 250px;
+            height: 450px;
+            background-color: #B5C78B;
+            display: grid;
+    
+            &__Img{
+                width: 215px;
+                height: 275px;
+                margin-left: 7%;
+
+                img{
+                    width: 215px;
+                    height: 270px;
+                    margin-top: 3%;
+                }
             }
-        }
-
-        &__Titulo{
-
-        }
-
-        &__Autor{
-
-        }
-
-        &__BoxCategoria{
-
-            a{
-
+    
+            &__Titulo{
+                font-size: 24px;
+                color: #454142;
+                font-weight: bold;
+                margin-left: 7%;
+                margin-right: 7%;
+            }
+    
+            &__Autor{
+                margin-left: 7%;
+                font-size: 20px;
+                color:#454142;
+            }
+    
+            &__BoxCategoria{
+                margin: 7%;
+                height: 25px;
+                background-color: #DEDEDE;
+                a{
+                    margin: 2%;
+                    color: #454142;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -61,12 +86,50 @@
 
 
 .Autores{
+    margin-top: 2%;
+
+    &__Titulo{
+        width: 100%;
+        border-top:1px solid #DEDEDE;
+        border-bottom: 1px solid #DEDEDE;
+        font-size: 30px;
+        text-align: center;
+        color:#454142;
+    }
+
     &__Box{
-        &__Img{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2%;
 
-        }
         &__Autor{
+            width: 250px;
+            height: 400px;
+            background-color: #B5C78B;
+            margin-bottom: 2%;
+            display: grid;
+            
+            &__Img{
+                width: 215px;
+                height: 275px;
+                margin-left: 7%;
 
+                img{
+                    width: 215px;
+                    height: 270px;
+                    margin-top: 3%;
+                }
+            }
+
+            &__Nombre{
+                text-align: center;
+                font-size: 24px;
+                color: #454142;
+                font-weight: bold;
+                margin-left: 7%;
+                margin-right: 7%;   
+            }
         }
     }
 }

@@ -18,31 +18,31 @@ class AutorSeeder extends Seeder
 
         DB::table('autor')->insert([
             'nombre'=> "Marta Santés",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor1.jpg"
         ]);
         DB::table('autor')->insert([
             'nombre'=> "Penelope Ward",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor2.jpg"
         ]);
         DB::table('autor')->insert([
             'nombre'=> "Victoria Vílchez",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor3.jpg"
         ]);
         DB::table('autor')->insert([
             'nombre'=> "Tessa Bailey",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor4.jpg"
         ]);
         DB::table('autor')->insert([
             'nombre'=> "Julia Quinn",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor5.jpg"
         ]);
         DB::table('autor')->insert([
             'nombre'=> "Jennifer L. Armentrout",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor6.jpg"
         ]);
         DB::table('autor')->insert([
             'nombre'=> "Elisabet Benavent",
-            'foto'=>""
+            'foto'=>"Img\FotosAutores\autor7.jpg"
         ]);
     }
 }
