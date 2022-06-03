@@ -29,31 +29,7 @@ class LibroController extends Controller
 
         $libros = array_reverse($libros);
 
-        return view('home', ['libro' => $libros]);
-
-        /*
-        $alumnos = $this->alumnos->obtenerAlumnos();
-        return view('alumnos.lista', ['alumnos' => $alumnos]);
-        
-        $aux=0;
-        $libros = array();
-        $data=[];
-
-        foreach ($libro as $cadaLibro) {
-            $autor = $this -> obtenerAutor($cadaLibro->autor_id);
-            $categoria = $this -> obtenerCategoria($cadaLibro-> categoria_id);
-
-            $data[$aux]= [
-                'titulo' => $cadaLibro->titulo, 
-                'foto' =>$cadaLibro->foto, 
-                'autor' =>$autor->nombre, 
-                'categoria' =>$categoria
-            ];
-            $aux= $aux+1;
-        }
-
-        return view('home', $libros->toJson());
-        return view('home', response()->json($data, 200, [])); */    
+        return view('home', ['libro' => $libros]);   
     }
 
     public function editTitulo($titulo){

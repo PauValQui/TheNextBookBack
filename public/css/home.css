@@ -36,13 +36,13 @@
 }
 .Novedades__BoxLibros__Libro__Img {
   width: 215px;
-  height: 275px;
+  height: 290px;
   margin-left: 7%;
 }
 .Novedades__BoxLibros__Libro__Img img {
   width: 215px;
-  height: 270px;
-  margin-top: 3%;
+  height: 280px;
+  margin-top: 5%;
 }
 .Novedades__BoxLibros__Libro__Titulo {
   font-size: 24px;
@@ -50,11 +50,13 @@
   font-weight: bold;
   margin-left: 7%;
   margin-right: 7%;
+  text-decoration: none;
 }
 .Novedades__BoxLibros__Libro__Autor {
   margin-left: 7%;
   font-size: 20px;
   color: #454142;
+  text-decoration: none;
 }
 .Novedades__BoxLibros__Libro__BoxCategoria {
   margin: 7%;
@@ -65,6 +67,7 @@
   margin: 2%;
   color: #454142;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .Autores {
@@ -108,4 +111,5 @@
   font-weight: bold;
   margin-left: 7%;
   margin-right: 7%;
+  text-decoration: none;
 }

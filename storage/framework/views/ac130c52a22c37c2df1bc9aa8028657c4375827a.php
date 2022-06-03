@@ -27,13 +27,13 @@
         <div class="Header__NavBar">
           <ul class="Header__NavBar__ul">
             <li>
-              <a href='/Buscador'>Libros</a>
+              <a href='/search/libros'>Libros</a>
             </li>
             <li>
-              <a href='/Autores'>Autores</a>
+              <a href='/search/autores'>Autores</a>
             </li>
             <li>
-              <a href='/Contacto'>Contacto</a>
+              <a href='/contact'>Contacto</a>
             </li>
           </ul>
 

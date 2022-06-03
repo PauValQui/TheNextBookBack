@@ -46,13 +46,13 @@
     
             &__Img{
                 width: 215px;
-                height: 275px;
+                height: 290px;
                 margin-left: 7%;
 
                 img{
                     width: 215px;
-                    height: 270px;
-                    margin-top: 3%;
+                    height: 280px;
+                    margin-top: 5%;
                 }
             }
     
@@ -62,12 +62,14 @@
                 font-weight: bold;
                 margin-left: 7%;
                 margin-right: 7%;
+                text-decoration: none;
             }
     
             &__Autor{
                 margin-left: 7%;
                 font-size: 20px;
                 color:#454142;
+                text-decoration: none;
             }
     
             &__BoxCategoria{
@@ -78,6 +80,7 @@
                     margin: 2%;
                     color: #454142;
                     font-weight: bold;
+                    text-decoration: none;
                 }
             }
         }
@@ -128,7 +131,8 @@
                 color: #454142;
                 font-weight: bold;
                 margin-left: 7%;
-                margin-right: 7%;   
+                margin-right: 7%; 
+                text-decoration: none; 
             }
         }
     }
