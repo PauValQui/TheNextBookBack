@@ -11,8 +11,11 @@
   height: 50%;
   display: flex;
 }
-.Header__FirstBox__logo {
-  width: 8%;
+.Header__FirstBox__Enlace {
+  height: 100%;
+}
+.Header__FirstBox__Enlace__Logo {
+  width: 70%;
 }
 .Header__FirstBox__Search {
   display: flex;

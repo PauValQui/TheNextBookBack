@@ -13,8 +13,11 @@
         display: flex;
 
 
-        &__logo{
-            width: 8%;
+        &__Enlace{
+            height: 100%;
+            &__Logo{
+                width: 70%;
+            }
         }
 
         &__Search{
