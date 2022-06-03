@@ -9,6 +9,7 @@
     <link href="{{asset('css/header.css')}}" rel="stylesheet">
     <link href="{{asset('css/footer.css')}}" rel="stylesheet">
     <link href="{{asset('css/home.css')}}" rel="stylesheet">
+    <link href="{{asset('css/search.css')}}" rel="stylesheet">
 </head>
 <body>
 

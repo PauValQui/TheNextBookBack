@@ -7,7 +7,7 @@
         <div class="Slider__Box">
             @for ($i=1; $i <= 5; $i++)
                 <div class="Slider__Box__Item">
-                    <a href="/view/{{$libro[$i]->titulo}}"><img src="/Img/Slider/Slider{{$i}}.png"/></a> <!--Recoger el enlace del slider-->
+                    <a href="/view/{{trim($libro[$i]->titulo)}}"><img src="/Img/Slider/Slider{{$i}}.png"/></a> <!--Recoger el enlace del slider-->
                 </div>
             @endfor
         </div>
@@ -20,17 +20,17 @@
         </div>
         <div class="Novedades__BoxLibros">
             @for ($i=0; $i<4; $i++)
-            <div class="Novedades__BoxLibros__Libro">
-                <div class="Novedades__BoxLibros__Libro__Img">
-                    <a href="/view/{{$libro[$i]->titulo}}"><img src="{{$libro[$i]->foto}}" /></a>
+                <div class="Novedades__BoxLibros__Libro">
+                    <div class="Novedades__BoxLibros__Libro__Img">
+                        <a href="/view/{{$libro[$i]->titulo}}"><img src="{{$libro[$i]->foto}}" /></a>
+                    </div>
+                    <a class="Novedades__BoxLibros__Libro__Titulo" href="/view/{{$libro[$i]->titulo}}">{{$libro[$i]->titulo}}</a>
+                    <a class="Novedades__BoxLibros__Libro__Autor" href="/search/{{$libro[$i]->autor->nombre}}">{{$libro[$i]->autor->nombre}}</a>
+                    <div class="Novedades__BoxLibros__Libro__BoxCategoria">
+                        <a href="/search/{{$libro[$i]->categoria->tipo}}">{{$libro[$i]->categoria->tipo}}</a>
+                    </div>
                 </div>
-                <a class="Novedades__BoxLibros__Libro__Titulo" href="/view/{{$libro[$i]->titulo}}">{{$libro[$i]->titulo}}</a>
-                <a class="Novedades__BoxLibros__Libro__Autor" href="/search/{{$libro[$i]->autor->nombre}}">{{$libro[$i]->autor->nombre}}</a>
-                <div class="Novedades__BoxLibros__Libro__BoxCategoria">
-                    <a href="/search/{{$libro[$i]->categoria->tipo}}">{{$libro[$i]->categoria->tipo}}</a>
-                </div>
-            </div>
-        @endfor
+            @endfor
         </div>
         
     </div>

@@ -15,7 +15,7 @@
     <!--Header-->
     <div class="Header">
         <div class="Header__FirstBox">
-            <img src='../../Img/Logo.jpeg' alt="logo" id="logo" class="Header__FirstBox__logo" />
+            <a href="/" class="Header__FirstBox__Enlace"><img src='../../Img/Logo.jpeg' alt="logo" id="logo" class="Header__FirstBox__Enlace__Logo" /></a>
             <div class="Header__FirstBox__Search">
               <input type="text" class="Search__Box" name='Search__Box' placeholder="¿Qué buscas?"/>
               <i class="fa-regular fa-magnifying-glass"></i>            
@@ -27,13 +27,13 @@
         <div class="Header__NavBar">
           <ul class="Header__NavBar__ul">
             <li>
-              <a href='/Buscador'>Libros</a>
+              <a href='/search/libros'>Libros</a>
             </li>
             <li>
-              <a href='/Autores'>Autores</a>
+              <a href='/search/autores'>Autores</a>
             </li>
             <li>
-              <a href='/Contacto'>Contacto</a>
+              <a href='/contact'>Contacto</a>
             </li>
           </ul>
 

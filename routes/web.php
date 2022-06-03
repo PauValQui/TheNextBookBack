@@ -19,6 +19,4 @@ use App\Models\Libro;
 
 Route::get('/', [LibroController::class, 'index']);
 
-Route::get('/search/libros', function(){
-    return view('search');
-});
+Route::get('/search/{info}', [LibroController::class, 'search']);

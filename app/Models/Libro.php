@@ -20,15 +20,6 @@ class Libro extends Model
         return Libro::all();
     }
 
-    public static function obtenerNovedades(){
-        $novedades = DB::table('libro')
-        ->select('titulo', 'foto')
-        ->orderBy('created_at', $direction='desc')
-        ->get();
-
-        return $novedades;
-    }
-
     public static function obtenerLibrosPorId($id)
     {
         return Libro::find($id);
