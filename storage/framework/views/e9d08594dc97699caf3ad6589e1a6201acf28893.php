@@ -9,6 +9,7 @@
     <link href="<?php echo e(asset('css/header.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/footer.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/home.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/search.css')); ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -44,9 +45,7 @@
     </div>
 
     <!--Contenido-->
-    <div class="container">
       <?php echo $__env->yieldContent('content'); ?>
-    </div>
     <!--Footer-->
     <div class="Footer">
         <div class="Footer__Box">

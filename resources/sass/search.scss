@@ -1,0 +1,93 @@
+.Buscador{
+    margin-bottom: 2%;
+    &__BoxLibros{
+        display:block;
+        
+        &__Libro{
+            width: 250px;
+            height: 450px;
+            background-color: #B5C78B;
+            display: inline-grid;
+            margin-top: 2%;
+            margin-left: 4%;
+
+
+            &__Img{
+                width: 215px;
+                height: 290px;
+                margin-left: 7%;
+
+                img{
+                    width: 215px;
+                    height: 280px;
+                    margin-top: 5%;
+                }
+                
+            }
+            
+            &__Titulo{
+                font-size: 24px;
+                color: #454142;
+                font-weight: bold;
+                margin-left: 7%;
+                margin-right: 7%;
+                text-decoration: none;
+            }
+
+            &__Autor{
+                margin-left: 7%;
+                font-size: 20px;
+                color:#454142;
+                text-decoration: none;
+            }
+
+            &__BoxCategoria{
+                margin: 7%;
+                height: 25px;
+                background-color: #DEDEDE;
+                a{
+                    margin: 2%;
+                    color: #454142;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__BoxAutores{
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2%;
+
+        &__Autor{
+            width: 250px;
+            height: 400px;
+            background-color: #B5C78B;
+            margin-bottom: 2%;
+            display: grid;
+
+            &__Img{
+                width: 215px;
+                height: 275px;
+                margin-left: 7%;
+
+                img{
+                    width: 215px;
+                    height: 270px;
+                    margin-top: 3%;
+                }
+            }
+            &__Nombre{
+                text-align: center;
+                font-size: 24px;
+                color: #454142;
+                font-weight: bold;
+                margin-left: 7%;
+                margin-right: 7%; 
+                text-decoration: none; 
+            }
+        }
+    }
+}

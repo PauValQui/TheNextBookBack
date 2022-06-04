@@ -17,6 +17,7 @@ class LibroResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'titulo'=> $this->titulo,
             'foto'=> $this->foto,
             'autor'=> new AutorResource($this->autor),

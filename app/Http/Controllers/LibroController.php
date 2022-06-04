@@ -6,6 +6,7 @@ use App\Http\Resources\LibroCollection;
 use App\Http\Resources\LibroResource;
 use Illuminate\Http\Request;
 use App\Models\Libro;
+use App\Models\Categoria;
 
 
 class LibroController extends Controller
@@ -42,7 +43,9 @@ class LibroController extends Controller
             $libros[$i] = new LibroResource(Libro::obtenerLibrosPorId($i+1));
         }
 
-        return view('search', ['libro' => $libros, 'longitud' => $longitud, 'info' => $info]);  
+        $categorias = Categoria::all();
+
+        return view('search', ['libro' => $libros, 'longitud' => $longitud, 'info' => $info, 'categorias' => $categorias]);  
     }
 
     public function editTitulo($titulo){
