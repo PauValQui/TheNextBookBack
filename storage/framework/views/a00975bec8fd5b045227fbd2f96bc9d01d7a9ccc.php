@@ -1,6 +1,6 @@
-@extends('layout/base')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="Login">
         <form class="Login__Form">
             <div class="Login__Form__Datos">
@@ -24,4 +24,5 @@
         </form>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout/base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/login.blade.php ENDPATH**/ ?>

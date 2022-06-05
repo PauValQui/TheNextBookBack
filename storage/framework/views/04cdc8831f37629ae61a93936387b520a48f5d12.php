@@ -1,24 +1,24 @@
-@extends('layout/base')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="View">
         <div class="View__BoxImg">
-            <img src="{{asset ($libro[0]->foto)}}" />
+            <img src="<?php echo e(asset ($libro[0]->foto)); ?>" />
         </div>
         <div class="View__BoxDescription">
-            <p class="View__BoxDescription__Titulo" >{{$libro[0]->titulo}}</p>
+            <p class="View__BoxDescription__Titulo" ><?php echo e($libro[0]->titulo); ?></p>
             <div class="View__BoxDescription__Autor">
-                <a href="/search/{{$libro[0]->autor->id}}">{{$libro[0]->autor->nombre}}</a>
+                <a href="/search/<?php echo e($libro[0]->autor->id); ?>"><?php echo e($libro[0]->autor->nombre); ?></a>
             </div>
             <div class="View__BoxDescription__Categoria">
-                <a href="/search/{{$libro[0]->categoria->tipo}}">{{$libro[0]->categoria->tipo}}</a>
+                <a href="/search/<?php echo e($libro[0]->categoria->tipo); ?>"><?php echo e($libro[0]->categoria->tipo); ?></a>
             </div>
-            <p class="View__BoxDescription__Sinopsis">{{$libro[0]->sinopsis}}</p>
+            <p class="View__BoxDescription__Sinopsis"><?php echo e($libro[0]->sinopsis); ?></p>
         </div>
 
         <div class="View__ShopBox">
             <p class="View__ShopBox__Titulo">Precio:</p>
-            <p class="View__ShopBox__Precio">{{$libro[0]->precio}}</p>
+            <p class="View__ShopBox__Precio"><?php echo e($libro[0]->precio); ?></p>
             <button class="View__ShopBox__Boton">Añadir a la cesta</button>
             <button class="View__ShopBox__Boton">Añadir a la lista de deseos</button>
         </div>
@@ -46,4 +46,5 @@
         <!--Bucle valoraciones de este libro
         -->
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout/base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/view.blade.php ENDPATH**/ ?>

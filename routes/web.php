@@ -20,3 +20,13 @@ use App\Models\Libro;
 Route::get('/', [LibroController::class, 'index']);
 
 Route::get('/search/{info}', [LibroController::class, 'search']);
+
+Route::get('/view/{info}', [LibroController::class, 'show']);
+
+Route::get('/login', function(){
+    return view('login');
+});
+
+Route::get('/checkin', function(){
+    return view('checkin');
+});

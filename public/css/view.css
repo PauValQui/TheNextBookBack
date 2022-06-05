@@ -1,0 +1,118 @@
+.View {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.View__BoxImg {
+  width: 25%;
+}
+.View__BoxImg img {
+  width: 250px;
+  height: 350px;
+  margin-left: 15%;
+}
+.View__BoxDescription {
+  width: 45%;
+}
+.View__BoxDescription__Titulo {
+  font-size: 40px;
+  color: #454142;
+  font-weight: bold;
+}
+.View__BoxDescription__Autor {
+  margin-bottom: 1%;
+}
+.View__BoxDescription__Autor a {
+  font-size: 18px;
+  color: #454142;
+  font-weight: bold;
+  text-decoration: none;
+}
+.View__BoxDescription__Categoria {
+  background-color: #454142;
+  width: 20%;
+}
+.View__BoxDescription__Categoria a {
+  font-size: 20px;
+  color: #B5C78B;
+  text-decoration: none;
+}
+.View__BoxDescription__Sinopsis {
+  font-size: 18px;
+  color: #454142;
+}
+.View__ShopBox {
+  border-left: 1px solid #454142;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.View__ShopBox__Titulo {
+  font-size: 40px;
+  color: #454142;
+  margin-top: 25%;
+  margin-bottom: 0;
+}
+.View__ShopBox__Precio {
+  font-size: 40px;
+  color: #454142;
+}
+.View__ShopBox__Boton {
+  width: 85%;
+  height: 15%;
+  font-size: 20px;
+  color: #B5C78B;
+  background-color: #454142;
+  margin-bottom: 10%;
+}
+
+.Valuations {
+  display: flex;
+  justify-content: space-around;
+}
+.Valuations__Formulario {
+  background-color: #B5C78B;
+  width: 55%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+.Valuations__Formulario__Label {
+  color: #454142;
+  font-size: 20px;
+  width: 65%;
+  margin: 1%;
+  margin-left: 5%;
+}
+.Valuations__Formulario__Input {
+  background-color: #454142;
+  color: #B5C78B;
+  width: 65%;
+  height: 15%;
+  margin: 1%;
+  margin-left: 5%;
+}
+.Valuations__Formulario__Select {
+  width: 25%;
+  margin: 1%;
+  margin-left: 5%;
+}
+.Valuations__Formulario__Textarea {
+  background-color: #454142;
+  color: #B5C78B;
+  width: 65%;
+  height: 50%;
+  margin: 1%;
+  margin-left: 5%;
+}
+.Valuations__Formulario__Button {
+  background-color: #454142;
+  color: #B5C78B;
+  height: 20%;
+  width: 25%;
+  margin: 1%;
+  margin-left: 5%;
+}

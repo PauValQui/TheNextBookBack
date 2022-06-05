@@ -10,6 +10,9 @@
     <link href="<?php echo e(asset('css/footer.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/home.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/search.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/view.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/login.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/checkin.css')); ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -39,7 +42,7 @@
           </ul>
 
           <button class="Header__NavBar__BotonInicio">
-            <a href='/Login' class="Header__NavBar__BotonInicio__Enlace">Inicio Sesión</a>
+            <a href='/login' class="Header__NavBar__BotonInicio__Enlace">Inicio Sesión</a>
           </button>
         </div>
     </div>

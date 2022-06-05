@@ -1,0 +1,132 @@
+.View{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &__BoxImg{
+        width: 25%;
+
+        img{
+            width:250px;
+            height: 350px;
+            margin-left: 15%;
+        }
+    }
+
+    &__BoxDescription{
+        width: 45%;
+        
+        &__Titulo{
+            font-size: 40px;
+            color: #454142;
+            font-weight: bold;
+        }
+        &__Autor{
+            margin-bottom: 1%;
+            a{
+                font-size: 18px;
+                color: #454142;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+        &__Categoria{
+            background-color: #454142;
+            width: 20%;
+            a{
+                font-size: 20px;
+                color: #B5C78B;
+                text-decoration: none;
+            }
+        }
+        &__Sinopsis{
+            font-size: 18px;
+            color: #454142;
+        }
+    }
+
+    &__ShopBox{
+        border-left:1px solid #454142;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__Titulo{
+            font-size: 40px;
+            color: #454142;
+            margin-top:25%;
+            margin-bottom: 0;
+        }
+        &__Precio{
+            font-size: 40px;
+            color: #454142;
+        }
+        &__Boton{
+            width: 85%;
+            height: 15%;
+            font-size: 20px;
+            color: #B5C78B;
+            background-color: #454142;
+            margin-bottom: 10%;
+        }
+    }
+}
+
+
+
+.Valuations{
+    display: flex;
+    justify-content: space-around;
+    &__Formulario{
+        background-color:#B5C78B;
+        width: 55%;
+        height: 500px;
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 1%;
+        
+        
+        &__Label{
+            color: #454142;
+            font-size: 20px;
+            width:65%;
+            margin:1%;
+            margin-left: 5%;
+        }
+
+        &__Input{
+            background-color: #454142;
+            color: #B5C78B;
+            width: 65%;
+            height: 15%;
+            margin:1%;
+            margin-left: 5%;
+        }
+
+        &__Select{
+            width: 25%;
+            margin:1%;
+            margin-left: 5%;
+        }
+
+        &__Textarea{
+            background-color: #454142;
+            color: #B5C78B;
+            width: 65%;
+            height: 50%;
+            margin:1%;
+            margin-left: 5%;
+        }
+        &__Button{
+            background-color: #454142;
+            color: #B5C78B;
+            height: 20%;
+            width: 25%;
+            margin:1%;
+            margin-left: 5%;
+            
+        }
+    }
+}

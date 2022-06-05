@@ -103,7 +103,7 @@
                                         <a href="/search/<?php echo e($libro[$j]->categoria->tipo); ?>"><?php echo e($libro[$j]->categoria->tipo); ?></a>
                                     </div>
                                 </div>
-                            <?php endif; ?>                    
+                            <?php endif; ?>                     
                     <?php endfor; ?>
                 <?php break; ?>
         <?php endswitch; ?>

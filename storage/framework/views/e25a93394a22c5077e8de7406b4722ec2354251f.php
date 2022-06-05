@@ -1,6 +1,6 @@
-@extends('layout/base')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="Check">
         <form class="Check__Form">
             <div class="Check__Form__Datos">
@@ -13,10 +13,6 @@
             </div>
             <div class="Check__Form__Datos">
                 <p>Nombre de Usuario:</p>
-                <input type='text' class="Check__Form__Datos__Box" />
-            </div>
-            <div class="Check__Form__Datos">
-                <p>Email:</p>
                 <input type='text' class="Check__Form__Datos__Box" />
             </div>
             <div class="Check__Form__Datos">
@@ -38,4 +34,5 @@
         </form>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout/base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/checkin.blade.php ENDPATH**/ ?>

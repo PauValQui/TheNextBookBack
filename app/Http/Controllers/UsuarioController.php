@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisterRequest;
 
 class UsuarioController extends Controller
 {
@@ -12,17 +15,6 @@ class UsuarioController extends Controller
     public function __construct(Usuario $usuario)
     {
         $this->usuario = $usuario;
-    }
-
-    public function index()
-    {
-        $usuario = $this->usuario->obtenerUsuario(); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
-        return view('usuario.lista', ['usuario' => $usuario]);
-    }
-
-    public function create()
-    {
-        return view('usuario.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
     }
 
     public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion
@@ -34,14 +26,49 @@ class UsuarioController extends Controller
     }
     
 
-    public function show(){
-        $usuario = $this->usuario->obtenerUsuario();
-        return view('usuario.ver', ['usuario' => $usuario]);
+    public function showRegister(){
+        if(Auth::check()){
+            return redirect()->route('home.index');
+        }
+        return view('checkin');
     }
 
-    public function edit($id){
-        $usuario = $this->usuario->obtenerUsuario($id);
-        return view('usuario.editar', ['usuario' => $usuario]);
+    public function register(RegisterRequest $request){
+        
+        $usuario = Usuario::create($request->validated());
+        auth()->login($usuario);
+        return redirect('/home')->with('success', "Account successfully registered.");
+        /*
+        $user = new User;
+         $user->name = $request->name;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->setPassword($request->password);
+        $user->save();
+        return redirect('/asdasd')->with('success', "Account successfully registered."); */
+
+    }
+
+    public function login(LoginRequest $request)
+    {
+        $credentials = $request->getCredentials();
+        
+        if(!Auth::validate($credentials)):
+            dd('error');
+           return redirect()->to('login')
+                ->withErrors(trans('auth.failed'));
+        endif;
+        $usuario = Auth::getProvider()->retrieveByCredentials($credentials);
+        
+
+        Auth::login($usuario);
+
+        return $this->authenticated($request, $usuario);
+    }
+
+    protected function authenticated(Request $request, $usuario) 
+    {
+        return redirect()->route('home.index');
     }
 
     public function update(Request $request, $id)
@@ -49,13 +76,6 @@ class UsuarioController extends Controller
         $usuario = Usuario::find($id);
         $usuario->fill($request->all());
         $usuario->save();
-        return redirect()->action([UsuarioController::class, 'index']);
-    }
-
-    public function destroy($id)
-    {
-        $usuario = Usuario::find($id);
-        $usuario->delete();
         return redirect()->action([UsuarioController::class, 'index']);
     }
 }

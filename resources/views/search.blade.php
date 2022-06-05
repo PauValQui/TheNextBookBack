@@ -103,7 +103,7 @@
                                         <a href="/search/{{$libro[$j]->categoria->tipo}}">{{$libro[$j]->categoria->tipo}}</a>
                                     </div>
                                 </div>
-                            @endif                    
+                            @endif                     
                     @endfor
                 @break
         @endswitch

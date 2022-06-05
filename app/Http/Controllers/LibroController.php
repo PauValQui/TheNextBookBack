@@ -48,15 +48,13 @@ class LibroController extends Controller
         return view('search', ['libro' => $libros, 'longitud' => $longitud, 'info' => $info, 'categorias' => $categorias]);  
     }
 
-    public function editTitulo($titulo){
-        $libro = $this->libro->obtenerLibrosPorTitulo($titulo);
-        return view('libro.editar', ['libro' => $libro]);
-    }
+    public static function show($info){
 
-    public function edit($id){
-        $libro = $this->libro->obtenerLibrosPorTitulo($id);
-        return view('libro.editar', ['libro' => $libro]);
+        $libros[0] = new LibroResource(Libro::obtenerLibrosPorId($info));
+
+        return view('view', ['libro' => $libros, 'info' => $info]);
     }
+    
 
     public function update(Request $request, $id)
     {
