@@ -17,59 +17,15 @@ class UsuarioController extends Controller
         $this->usuario = $usuario;
     }
 
-    public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion
-                                            //       mandada desde un formulario.
+    public function store(RegisterRequest $request)                                         
+    //       mandada desde un formulario.
     {
-        $usuario = new Usuario($request->all());  //all()-> se encarga de cargar los datos al objeto $libro
-        $usuario->save();                         //save()-> guardalos datos en la bd 
-        return redirect()->action([UsuarioController::class, 'index']); //retorna la vista del listado de libros.
+        $usuario = new Usuario($request->validated()); 
+        $usuario->save();                         
+        return redirect('/home')-> with('success', "Account successfully registered.");
     }
     
-
-    public function showRegister(){
-        if(Auth::check()){
-            return redirect()->route('home.index');
-        }
-        return view('checkin');
-    }
-
-    public function register(RegisterRequest $request){
-        
-        $usuario = Usuario::create($request->validated());
-        auth()->login($usuario);
-        return redirect('/home')->with('success', "Account successfully registered.");
-        /*
-        $user = new User;
-         $user->name = $request->name;
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->setPassword($request->password);
-        $user->save();
-        return redirect('/asdasd')->with('success', "Account successfully registered."); */
-
-    }
-
-    public function login(LoginRequest $request)
-    {
-        $credentials = $request->getCredentials();
-        
-        if(!Auth::validate($credentials)):
-            dd('error');
-           return redirect()->to('login')
-                ->withErrors(trans('auth.failed'));
-        endif;
-        $usuario = Auth::getProvider()->retrieveByCredentials($credentials);
-        
-
-        Auth::login($usuario);
-
-        return $this->authenticated($request, $usuario);
-    }
-
-    protected function authenticated(Request $request, $usuario) 
-    {
-        return redirect()->route('home.index');
-    }
+    //No esta terminado el registro y el logeo
 
     public function update(Request $request, $id)
     {

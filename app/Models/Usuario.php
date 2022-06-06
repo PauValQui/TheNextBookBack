@@ -18,13 +18,16 @@ class Usuario extends Authenticatable
 
     protected $casts = ['email_verified_at' => 'datetime'];
 
+    public function setPassword($value){
+        $this->atributes['password'] = bcrypt($value);
+    }
 
     public function obtenerUsuarios()
     {
         return Usuario::all();
     }
 
-    public function obtenerLibrosPorId($id)
+    public function obtenerUsuariosPorId($id)
     {
         return Usuario::find($id);
     }

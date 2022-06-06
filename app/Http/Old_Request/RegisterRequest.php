@@ -26,15 +26,10 @@ class RegisterRequest extends FormRequest
         return [
             'nombre' => 'required|min:3',
             'apellido' => 'required|min:3',
-            'email' => 'required|min:3',
+            'email' => 'required|min:3|email',
             'nombreUsuario' => 'required|min:3',
             'password' => 'required|min:3',
             'password_confirmation' => 'required|same:password'
-            /* 'name' => 'required|min:3',
-            'email' => 'required|email:rfc,dns|unique:users,email',
-            'username' => 'required|unique:users,username',
-            'password' => 'required|min:8',
-            'password_confirmation' => 'required|same:password' */
-        ];
+       ];
     }
 }

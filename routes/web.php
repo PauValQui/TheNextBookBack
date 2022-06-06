@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
-use App\Http\Resources\LibroCollection;
-use App\Http\Resources\LibroResource;
-use App\Models\Libro;
+use App\Http\Controllers\UsuarioController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +29,5 @@ Route::get('/login', function(){
 Route::get('/checkin', function(){
     return view('checkin');
 });
+
+Route::post('/checkin', [UsuarioController::class, 'store']);
