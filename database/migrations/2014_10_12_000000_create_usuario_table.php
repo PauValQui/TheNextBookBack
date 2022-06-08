@@ -13,7 +13,7 @@ class CreateUsuarioTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->id()->autoIncrement()->unique();
             $table->string('nombre');
             $table->string('apellido');
@@ -21,7 +21,7 @@ class CreateUsuarioTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('foto')->nullable();
+            $table->string('password_confirmation');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,6 +34,6 @@ class CreateUsuarioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('usuarios');
     }
 }

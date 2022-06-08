@@ -31,9 +31,8 @@
 .Footer__Box__RRSS .RRSS_BoxIcon {
   height: 5%;
 }
-.Footer__Box__RRSS .RRSS_BoxIcon .BoxIcon__Icon .fa-2 {
-  width: 3em;
-  height: 3em;
+.Footer__Box__RRSS .RRSS_BoxIcon .BoxIcon__Icon i {
+  width: 20%;
 }
 .Footer__Copyright {
   height: 10%;

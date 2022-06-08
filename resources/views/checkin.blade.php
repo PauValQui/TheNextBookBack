@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="Check">
-        <form class="Check__Form" method="POST" >
+        <form class="Check__Form" method="POST" action="{{ route('checkin.store') }}">
             @csrf
             <div class="Check__Form__Datos">
                 <p>Nombre:</p>
@@ -48,11 +48,7 @@
             </div>
             
             <div class="Check__Form__Boton">
-                <button class="Check__Form__Boton__Foto">Añadir foto de perfil</button>
-            </div>
-            
-            <div class="Check__Form__Boton">
-                <button class="Check__Form__Boton__Enviar">Registrate</button>
+                <input type="submit" value="Registrate" class="Check__Form__Boton__Enviar" />
             </div>
         </form>
     </div>

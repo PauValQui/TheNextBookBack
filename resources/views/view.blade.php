@@ -25,22 +25,30 @@
     </div>
 
     <div class="Valuations">
-        <form action="POST" class="Valuations__Formulario">
-            <label class="Valuations__Formulario__Label">Nombre de Usuario: </label>
-            <input type="text" placeholder="Nombre de usuario" class="Valuations__Formulario__Input" />
+        <form action="{{ route('valoracion.store') }}" method="POST" class="Valuations__Formulario"> 
+            @csrf
             <label class="Valuations__Formulario__Label">Titulo de la valoración:</label>
-            <input type="text" placeholder="Titulo" class="Valuations__Formulario__Input"/>
+            <input type="text" name="titulo" placeholder="Titulo" class="Valuations__Formulario__Input"/>
+            @error('titulo')
+                    <p class="error-message">{{ $message }}</p>
+            @enderror
+            
             <label class="Valuations__Formulario__Label">Puntuación</label>
             <select class="Valuations__Formulario__Select">
-                <option value="1 estrella">1</option>
-                <option value="2 estrellas">2</option>
-                <option value="3 estrellas">3</option>
-                <option value="4 estrellas">4</option>
-                <option value="5 estrellas">5</option>
-            </select> 
+                <option value="1">1 estrella</option>
+                <option value="2">2 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="5">5 estrellas</option>
+            </select>
+
             <label class="Valuations__Formulario__Label">Reseña:</label>
-            <textarea class="Valuations__Formulario__Textarea" cols="20" placeholder="Introduce tu reseña:"></textarea>
-            <input type="button" value="Enviar" class="Valuations__Formulario__Button"/>
+            <textarea name="comentario" class="Valuations__Formulario__Textarea" cols="20" placeholder="Introduce tu reseña:"></textarea>
+            @error('comentario')
+                    <p class="error-message">{{ $message }}</p>
+            @enderror
+            <input type="hidden" name="libro_id" value="{{$libro[0]->id}}">
+            <input type="submit" value="Enviar" class="Valuations__Formulario__Button"/>
         </form>
 
         <!--Bucle valoraciones de este libro

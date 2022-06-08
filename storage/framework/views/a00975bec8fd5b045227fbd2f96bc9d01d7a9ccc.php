@@ -15,7 +15,7 @@
                 <p>¿No tienes cuenta? <a href="/checkin" class="Login__Form__Enlace__Registro">Registrate aquí</a></p>
             </div>
             <div class="Login__Form__Boton">
-                <button class="Login__Form__Boton__Enviar">Iniciar Sesión</button>
+                <input type='submit' value="Iniciar Sesión" class="Login__Form__Boton__Enviar"/>
             </div>
         </form>
     </div>

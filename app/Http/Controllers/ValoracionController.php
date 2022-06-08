@@ -20,16 +20,26 @@ class ValoracionController extends Controller
         return view('valoracion.lista', ['valoracion' => $valoracion]);
     }
 
-    public function create()
+    public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion                                        
+     //       mandada desde un formulario.
     {
-        return view('valoracion.crear'); //redirecciona a una vista donde crearemos un formulario para crear un nuevo libro
-    }
+        $request->validate([
+            'titulo' => 'required',
+            'puntuacion' => 'required',
+            'comentario' => 'required',
+            'libro_id' => 'required',
+        ]);
 
-    public function store(Request $request) //Este metodo crea un nuevo libro, $request tiene toda la informacion mandada desde un formulario.
-    {
-        $valoracion = new Valoracion($request->all());  //all()-> se encarga de cargar los datos al objeto $libro
-        $valoracion->save(); //save()-> guardalos datos en la bd 
-        return redirect()->action([ValoracionController::class, 'index']); //retorna la vista del listado de libros.
+        $valoracion = new Valoracion;
+        $valoracion->titulo = $request->titulo;
+        $valoracion->puntuacion = $request->puntuacion;
+        $valoracion->comentario = $request->comentario;
+        $valoracion->libro_id = $request->libro_id;
+        
+
+        $valoracion->save();
+        return back()->with('success', 'Valoracion enviada.');
+
     }
     
 

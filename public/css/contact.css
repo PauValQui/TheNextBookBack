@@ -1,0 +1,18 @@
+.Contact {
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+}
+.Contact__Box__RRSS {
+  color: #B5C78B;
+}
+.Contact__Box__Icons {
+  width: 100%;
+}
+.Contact__Box__Icons i {
+  width: 25%;
+  color: #B5C78B;
+}
+.Contact__Email {
+  color: #B5C78B;
+}

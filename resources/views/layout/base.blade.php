@@ -13,6 +13,7 @@
     <link href="{{asset('css/view.css')}}" rel="stylesheet">
     <link href="{{asset('css/login.css')}}" rel="stylesheet">
     <link href="{{asset('css/checkin.css')}}" rel="stylesheet">
+    <link href="{{asset('css/contact.css')}}" rel="stylesheet">
 </head>
 <body>
 
@@ -22,10 +23,10 @@
             <a href="/" class="Header__FirstBox__Enlace"><img src='../../Img/Logo.jpeg' alt="logo" id="logo" class="Header__FirstBox__Enlace__Logo" /></a>
             <div class="Header__FirstBox__Search">
               <input type="text" class="Search__Box" name='Search__Box' placeholder="¿Qué buscas?"/>
-              <i class="fa-regular fa-magnifying-glass"></i>            
+              <button class="Search__Button"><img src="{{asset ('Img/IconosSVG/search.svg')}}" /></button>         
             </div>
             <div class="Header__FirstBox__ShopCart">
-                <a class="ShopCart__Link"><i class="fa-light fa-cart-shopping"></i></a>           
+                <a class="ShopCart__Link" href="/shopcart"><img src="{{asset ('Img/IconosSVG/shopCart.png')}}" alt=""></a>           
             </div>
         </div>
         <div class="Header__NavBar">
@@ -55,14 +56,14 @@
             <img src='../../Img/Logo.jpeg' alt='Logo' id='Logo' class='Footer__Box__Logo'/>
             <div class='Footer__Box__Contact'>
                 <p>¿Tienes alguna duda?</p>
-                <a href='/'>Contactanos</a>
+                <a href='/contact'>Contactanos</a>
             </div>
             <div class='Footer__Box__RRSS'>
                 <p>Siguenos en nuestras redes sociales:</p>
                 <div class='RRSS__BoxIcon'>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-goodreads-g"></i>
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                    <i class="fa-brands fa-goodreads-g fa-2x"></i>
                 </div>
             </div>
         </div>

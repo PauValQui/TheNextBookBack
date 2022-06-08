@@ -17,7 +17,7 @@
                     </div>
                 </div>
             
-            @elseif($info == $libro[$i]->autor->nombre)
+            <!--@elseif($info == $libro[$i]->autor->nombre)
                 @for ($j=0; $j < $longitud; $j++){
                     <div class="Buscador__BoxLibros">
                         @if ($libro[$j]->autor->nombre == $libro[$i]->autor->nombre)
@@ -34,7 +34,7 @@
                         @endif
                     </div>
                 }
-                @endfor
+                @endfor-->
             
             @elseif($info == 'libros')
                     @for ($i=0; $i<$longitud; $i++)
@@ -51,7 +51,6 @@
                     @endfor
             
             @elseif($info == 'autores')
-                <div class="Buscador__BoxAutores">
                     @for ($i=0; $i<7; $i++)
                         <div class="Buscador__BoxAutores__Autor">
                             <div class="Buscador__BoxAutores__Autor__Img">
@@ -60,7 +59,6 @@
                             <a class="Buscador__BoxAutores__Autor__Nombre" href="/search/{{$libro[$i]->autor->id}}">{{$libro[$i]->autor->nombre}}</a>
                         </div>
                     @endfor
-                </div>
             @endif
         @endfor
 

@@ -20,7 +20,6 @@ class CreateValoracionTable extends Migration
             $table->text('comentario');
 
             $table->bigInteger('libro_id')->references('id')->on('libro')->onDelete('cascade')->nullable();
-            $table->bigInteger('usuario_id')->references('id')->on('usuario')->onDelete('cascade')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateValoracionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_valoracion');
+        Schema::dropIfExists('valoracion');
     }
 }

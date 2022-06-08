@@ -17,7 +17,7 @@
                     </div>
                 </div>
             
-            <?php elseif($info == $libro[$i]->autor->nombre): ?>
+            <!--<?php elseif($info == $libro[$i]->autor->nombre): ?>
                 <?php for($j=0; $j < $longitud; $j++): ?>{
                     <div class="Buscador__BoxLibros">
                         <?php if($libro[$j]->autor->nombre == $libro[$i]->autor->nombre): ?>
@@ -34,7 +34,7 @@
                         <?php endif; ?>
                     </div>
                 }
-                <?php endfor; ?>
+                <?php endfor; ?>-->
             
             <?php elseif($info == 'libros'): ?>
                     <?php for($i=0; $i<$longitud; $i++): ?>
@@ -51,7 +51,6 @@
                     <?php endfor; ?>
             
             <?php elseif($info == 'autores'): ?>
-                <div class="Buscador__BoxAutores">
                     <?php for($i=0; $i<7; $i++): ?>
                         <div class="Buscador__BoxAutores__Autor">
                             <div class="Buscador__BoxAutores__Autor__Img">
@@ -60,7 +59,6 @@
                             <a class="Buscador__BoxAutores__Autor__Nombre" href="/search/<?php echo e($libro[$i]->autor->id); ?>"><?php echo e($libro[$i]->autor->nombre); ?></a>
                         </div>
                     <?php endfor; ?>
-                </div>
             <?php endif; ?>
         <?php endfor; ?>
 

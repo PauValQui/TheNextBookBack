@@ -29,6 +29,6 @@ class CreateAutorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_autor');
+        Schema::dropIfExists('autor');
     }
 }

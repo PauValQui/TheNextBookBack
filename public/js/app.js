@@ -52,6 +52,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./resources/sass/contact.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/contact.scss ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9yZXNvdXJjZXMvc2Fzcy9jb250YWN0LnNjc3MuanMiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcmVzb3VyY2VzL3Nhc3MvY29udGFjdC5zY3NzP2U1MTEiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/sass/contact.scss\n");
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -199,6 +210,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 			"css/home": 0,
 /******/ 			"css/footer": 0,
 /******/ 			"css/header": 0,
+/******/ 			"css/contact": 0,
 /******/ 			"css/checkin": 0,
 /******/ 			"css/login": 0,
 /******/ 			"css/view": 0
@@ -251,15 +263,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/header.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/footer.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/search.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/view.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/login.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/checkin.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/header.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/footer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/search.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/view.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/login.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/checkin.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/search","css/home","css/footer","css/header","css/contact","css/checkin","css/login","css/view"], () => (__webpack_require__("./resources/sass/contact.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

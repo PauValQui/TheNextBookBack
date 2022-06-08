@@ -11,7 +11,7 @@ class Valoracion extends Model
 
     protected $table = "valoracion";
 
-    protected $fillable = ['titulo', 'puntuacion', 'comentario','libro_id','usuario_id'];
+    protected $fillable = ['titulo', 'puntuacion', 'comentario','libro_id'];
     protected $hidden = ['id'];
 
     public function obtenerValoracionesPorLibro($libro_id)

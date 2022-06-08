@@ -5,7 +5,7 @@
         <div class="Slider__Box">
             <?php for($i=1; $i <= 5; $i++): ?>
                 <div class="Slider__Box__Item">
-                    <a href="/view/<?php echo e(trim($libro[$i]->titulo)); ?>"><img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/></a> <!--Recoger el enlace del slider-->
+                    <a href="/view/<?php echo e($libro[$i]->id); ?>"><img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/></a> <!--Recoger el enlace del slider-->
                 </div>
             <?php endfor; ?>
         </div>

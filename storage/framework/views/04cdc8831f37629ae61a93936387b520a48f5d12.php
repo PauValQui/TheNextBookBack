@@ -25,22 +25,44 @@
     </div>
 
     <div class="Valuations">
-        <form action="POST" class="Valuations__Formulario">
-            <label class="Valuations__Formulario__Label">Nombre de Usuario: </label>
-            <input type="text" placeholder="Nombre de usuario" class="Valuations__Formulario__Input" />
+        <form action="<?php echo e(route('valoracion.store')); ?>" method="POST" class="Valuations__Formulario"> 
+            <?php echo csrf_field(); ?>
             <label class="Valuations__Formulario__Label">Titulo de la valoración:</label>
-            <input type="text" placeholder="Titulo" class="Valuations__Formulario__Input"/>
+            <input type="text" name="titulo" placeholder="Titulo" class="Valuations__Formulario__Input"/>
+            <?php $__errorArgs = ['titulo'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="error-message"><?php echo e($message); ?></p>
+            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+            
             <label class="Valuations__Formulario__Label">Puntuación</label>
             <select class="Valuations__Formulario__Select">
-                <option value="1 estrella">1</option>
-                <option value="2 estrellas">2</option>
-                <option value="3 estrellas">3</option>
-                <option value="4 estrellas">4</option>
-                <option value="5 estrellas">5</option>
-            </select> 
+                <option value="1">1 estrella</option>
+                <option value="2">2 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="5">5 estrellas</option>
+            </select>
+
             <label class="Valuations__Formulario__Label">Reseña:</label>
-            <textarea class="Valuations__Formulario__Textarea" cols="20" placeholder="Introduce tu reseña:"></textarea>
-            <input type="button" value="Enviar" class="Valuations__Formulario__Button"/>
+            <textarea name="comentario" class="Valuations__Formulario__Textarea" cols="20" placeholder="Introduce tu reseña:"></textarea>
+            <?php $__errorArgs = ['comentario'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                    <p class="error-message"><?php echo e($message); ?></p>
+            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+            <input type="hidden" name="libro_id" value="<?php echo e($libro[0]->id); ?>">
+            <input type="submit" value="Enviar" class="Valuations__Formulario__Button"/>
         </form>
 
         <!--Bucle valoraciones de este libro
