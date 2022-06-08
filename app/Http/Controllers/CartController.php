@@ -2,58 +2,48 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\LibroResource;
+
 use Illuminate\Http\Request;
-use App\Models\Libro;
+
 
 class CartController extends Controller
 {
 
-    public function shop()
-
-    {
-
-        $libro = Libro::all();
-
-       //dd($libro);
-
-        return view('shopcart')->with(['libro' => $libro]);
-
-    }
-
-
     public function cart()  {
 
-        $cartCollection = \Cart::getContent();
-
-        //dd($cartCollection);
-
-        return view('cart')->with(['cartCollection' => $cartCollection]);;
+        $cartItems = \Cart::getContent();
+        // dd($cartItems);
+        return view('shopcart', ['cartItems' => $cartItems]);
 
     }
 
+
+    public function add(Request $request)
+    {
+        \Cart::add(
+            [
+                'id' => $request->id,
+                'name' => $request->titulo,
+                'price' => $request->precio,
+                'quantity' => $request->quantity,
+                'attributes' => array(
+                    'autor' => $request->autor,
+                    'foto' => $request->foto,
+                )
+                
+            ]
+        );
+
+        return redirect()->route('cart.view');
+
+    }
+
+    
     public function remove(Request $request){
 
         \Cart::remove($request->id);
 
-        return redirect()->route('cart.index')->with('success_msg', 'Item is removed!');
-
-    }
-
-
-    public function add(Request $request){
-
-        $libro = new LibroResource(Libro::obtenerLibrosPorId($request->id));
-
-        \Cart::add(array(
-            $libro -> id,
-            $libro -> nombre,
-            $libro -> precio,
-            $libro -> foto,
-            $libro -> autor -> nombre,
-        ));
-
-        return redirect()->route('cart.index')->with('success_msg', 'Item Agregado a sú Carrito!');
+        return redirect()->route('cart.view')->with('success_msg', 'Item is removed!');
 
     }
 
@@ -64,7 +54,7 @@ class CartController extends Controller
 
             array(
 
-                'quantity' => array(
+                'cantidad' => array(
 
                     'relative' => false,
 
@@ -74,7 +64,7 @@ class CartController extends Controller
 
         ));
 
-        return redirect()->route('cart.index')->with('success_msg', 'Cart is Updated!');
+        return redirect()->route('cart.view');
 
     }
 
@@ -83,7 +73,7 @@ class CartController extends Controller
 
         \Cart::clear();
 
-        return redirect()->route('cart.index')->with('success_msg', 'Car is cleared!');
+        return redirect()->route('cart.view');
 
     }
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\ValoracionController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +35,13 @@ Route::get('/checkin', function(){
 
 Route::post('/checkin', [UsuarioController::class, 'store'])->name('checkin.store');
 
-Route::get('/shopcart', function(){
-    return view('shopcart');
-});
+Route::get('/shopcart', [CartController::class,'cart'])->name('cart.view');
+
+Route::post('cart', [CartController::class,'add'])->name('cart.add');
+
+Route::post('update', [CartController::class, 'update'])->name('cart.update');
+Route::post('remove', [CartController::class, 'remove'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clear'])->name('cart.clear');
 
 Route::get('/contact', function(){
     return view('contact');

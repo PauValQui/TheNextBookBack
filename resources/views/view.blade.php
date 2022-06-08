@@ -19,8 +19,16 @@
         <div class="View__ShopBox">
             <p class="View__ShopBox__Titulo">Precio:</p>
             <p class="View__ShopBox__Precio">{{$libro[0]->precio}}</p>
-            <button class="View__ShopBox__Boton">Añadir a la cesta</button>
-            <button class="View__ShopBox__Boton">Añadir a la lista de deseos</button>
+            <form action="{{ route('cart.add') }}" method="post">
+                @csrf
+                <input type="hidden" name="id" value="{{$libro[0]->id}}">
+                <input type="hidden" name="name" value="{{$libro[0]->titulo}}">
+                <input type="hidden" name="autor" value="{{$libro[0]->autor->nombre}}">
+                <input type="hidden" name="foto" value="{{$libro[0]->foto}}">
+                <input type="hidden" name="price" value="{{$libro[0]->precio}}">
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" name="boton"  class="View__ShopBox__Boton" value="Añadir a la cesta">
+            </form>
         </div>
     </div>
 
@@ -29,9 +37,9 @@
             @csrf
             <label class="Valuations__Formulario__Label">Titulo de la valoración:</label>
             <input type="text" name="titulo" placeholder="Titulo" class="Valuations__Formulario__Input"/>
-            @error('titulo')
-                    <p class="error-message">{{ $message }}</p>
-            @enderror
+                @error('titulo')
+                        <p class="error-message">{{ $message }}</p>
+                @enderror
             
             <label class="Valuations__Formulario__Label">Puntuación</label>
             <select class="Valuations__Formulario__Select">
@@ -44,9 +52,9 @@
 
             <label class="Valuations__Formulario__Label">Reseña:</label>
             <textarea name="comentario" class="Valuations__Formulario__Textarea" cols="20" placeholder="Introduce tu reseña:"></textarea>
-            @error('comentario')
-                    <p class="error-message">{{ $message }}</p>
-            @enderror
+                @error('comentario')
+                        <p class="error-message">{{ $message }}</p>
+                @enderror
             <input type="hidden" name="libro_id" value="{{$libro[0]->id}}">
             <input type="submit" value="Enviar" class="Valuations__Formulario__Button"/>
         </form>
