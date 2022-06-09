@@ -1,11 +1,10 @@
 
 
 <?php $__env->startSection('content'); ?>
+    <div class="ShopCart__Texto">
+        <p>Cesta</p>
+    </div>
     <div class="ShopCart">
-        <div class="ShopCart__Texto">
-            <p>Cesta</p>
-        </div>
-
         <div class="ShopCart__Box">
             <?php $__currentLoopData = $cartItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>  
                 <div class="ShopCart__Box__Item">
@@ -17,14 +16,11 @@
                         <p class="Titulo"><?php echo e($item->titulo); ?></p>
                         <p class="Autor"><?php echo e($item->autor); ?></p>
 
-                        <div class="Cantidad">
-                            <form action="<?php echo e(route('cart.update')); ?>" method="POST" class="Cantidad__form">
-                                <?php echo csrf_field(); ?>
-                                <input type="hidden" name="id" value="<?php echo e($item->id); ?>" >
-                                <input type="number" name="cantidad" value="<?php echo e($item->cantidad); ?>"  />
-                                <button type="submit" class="Cantidad__form__Boton">Actualizar</button>
-                            </form>
-                        </div>
+                        <select name="cantidad" class="Cantidad">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                          </select>
 
                         <p class="Precio"><?php echo e($item->precio); ?></p>
                         <div class="Eliminar">
@@ -40,7 +36,7 @@
         </div>
         <div class="ShopCart__Total">
             <div class="ShopCart__Total__Texto">
-                <p>Total: <?php echo e(Cart::getTotal()); ?></p>
+                <p>Total: <?php echo e(Cart::getTotal()); ?> €</p>
             </div>
             <div class="ShopCart__Total__Limpiar">
                 <form action="<?php echo e(route('cart.clear')); ?>" method="POST">

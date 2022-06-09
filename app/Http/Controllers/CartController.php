@@ -20,19 +20,17 @@ class CartController extends Controller
 
     public function add(Request $request)
     {
-        \Cart::add(
-            [
+        \Cart::add([
                 'id' => $request->id,
-                'name' => $request->titulo,
                 'price' => $request->precio,
                 'quantity' => $request->quantity,
+                'name' => $request->titulo,
                 'attributes' => array(
                     'autor' => $request->autor,
                     'foto' => $request->foto,
-                )
+                ),
                 
-            ]
-        );
+        ]);
 
         return redirect()->route('cart.view');
 

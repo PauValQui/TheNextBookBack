@@ -21,6 +21,8 @@ Route::get('/', [LibroController::class, 'index']);
 
 Route::get('/search/{info}', [LibroController::class, 'search']);
 
+Route::post('/search', [LibroController::class,'searchLetras'])->name('header.buscador');
+
 Route::get('/view/{info}', [LibroController::class, 'show']);
 
 Route::post('/view', [ValoracionController::class, 'store']) -> name('valoracion.store');
@@ -28,6 +30,8 @@ Route::post('/view', [ValoracionController::class, 'store']) -> name('valoracion
 Route::get('/login', function(){
     return view('login');
 });
+
+Route::post('login', [UsuarioController::class, 'login']) -> name('login.login');
 
 Route::get('/checkin', function(){
     return view('checkin');
@@ -43,6 +47,5 @@ Route::post('update', [CartController::class, 'update'])->name('cart.update');
 Route::post('remove', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('clear', [CartController::class, 'clear'])->name('cart.clear');
 
-Route::get('/contact', function(){
-    return view('contact');
-});
+Route::get('/contact', function(){return view('contact');});
+

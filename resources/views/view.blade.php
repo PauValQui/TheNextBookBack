@@ -23,9 +23,9 @@
                 @csrf
                 <input type="hidden" name="id" value="{{$libro[0]->id}}">
                 <input type="hidden" name="name" value="{{$libro[0]->titulo}}">
+                <input type="hidden" name="price" value="{{$libro[0]->precio}}">
                 <input type="hidden" name="autor" value="{{$libro[0]->autor->nombre}}">
                 <input type="hidden" name="foto" value="{{$libro[0]->foto}}">
-                <input type="hidden" name="price" value="{{$libro[0]->precio}}">
                 <input type="hidden" name="quantity" value="1">
                 <input type="submit" name="boton"  class="View__ShopBox__Boton" value="Añadir a la cesta">
             </form>

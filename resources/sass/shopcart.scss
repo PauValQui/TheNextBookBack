@@ -1,0 +1,73 @@
+.ShopCart__Texto{
+    width: 100%;
+    height: 15%;
+    margin-left: 3%;
+    font-size: 40px;
+    color: #454142;
+}
+.ShopCart{
+    display: flex;
+    
+    &__Box{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+
+        &__Item{
+            display: flex;
+            width: 100%;
+            color: #454142;
+            &__Foto{
+                width: 20%;
+            }
+            &__Info{
+                .Titulo{
+                    width: 80%;
+                    font-size: 24px;
+                }
+
+                .Autor{
+                    width: 80%;
+                    font-size: 18px;
+                }
+
+                .Precio{
+                    width: 20%;
+                    font-size: 18px;
+                }
+                .Eliminar{
+
+                    &__Boton{
+                        background-color: #454142;
+                        color: #B5C78B;
+                        font-weight: bold;  
+                    }
+                }
+            }
+        }
+    }
+
+    
+    &__Total{
+        width: 20%;
+        height: 200px;
+        background-color: #B5C78B;
+        margin-bottom: 5%;
+
+        &__Texto{
+            font-size: 35px;
+            color: #454142;
+            margin-left: 5%;
+        }
+        &__Limpiar{
+            margin-left: 5%;
+            
+            &__Boton{
+                background-color: #454142;
+                color: #B5C78B;
+                height: 30px;
+                width: 75%;
+            }
+        }
+    }
+}

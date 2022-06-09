@@ -44,10 +44,13 @@ class UsuarioController extends Controller
     }
 
     public function login(Request $request){
-        $request->validate([          
-            'nombreUsuario' => 'required|unique:usuarios',
-            'password' => 'required | confirmed|min:8',
-        ]);
+
+       
+
+        if (Auth::attempt(['nombreUsuario' => $request['nombreUsuario'], 'password' =>$request['password']])) {
+            // Authentication passed...
+            return redirect()->view('home');
+        }
     }
 
     public function update(Request $request, $id)

@@ -2,21 +2,22 @@
 
 @section('content')
     <div class="Login">
-        <form class="Login__Form" method="POST">
+        <form class="Login__Form" method="POST" action="{{route ('login.login')}}">
             <div class="Login__Form__Datos">
                 <p>Nombre de Usuario:</p>
                 <input type='text' name="nombreUsuario" class="Login__Form__Datos__Box" />
-                @error('nombreUsuario')
-                    <p class="error-message">{{ $message }}</p>
-            @enderror
+                    @error('nombreUsuario')
+                        <p class="error-message">{{ $message }}</p>
+                    @enderror
             </div>
             <div class="Login__Form__Datos">
                 <p>Contraseña:</p>
-                <input type='text' name="password" class="Login__Form__Datos__Box" />
-            </div>
-            @error('password')
+                <input type='password' name="password" class="Login__Form__Datos__Box" />
+                    @error('password')
                     <p class="error-message">{{ $message }}</p>
-            @enderror
+                    @enderror
+            </div>
+            
             <div class="Login__Form__Enlace">
                 <p>¿No tienes cuenta? <a href="/checkin" class="Login__Form__Enlace__Registro">Registrate aquí</a></p>
             </div>

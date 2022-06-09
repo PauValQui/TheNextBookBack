@@ -699,15 +699,15 @@ class Cart
         $rules = array(
             'id' => 'required',
             'price' => 'required|numeric',
-            'quantity' => 'required|numeric|min:0.1',
+            'quantity' => 'required|numeric|min:1',
             'name' => 'required',
         );
 
         $validator = CartItemValidator::make($item, $rules);
 
-        if ($validator->fails()) {
+        /*if ($validator->fails()) {
             throw new InvalidItemException($validator->messages()->first());
-        }
+        }*/
 
         return $item;
     }

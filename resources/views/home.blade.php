@@ -5,7 +5,7 @@
         <div class="Slider__Box">
             @for ($i=1; $i <= 5; $i++)
                 <div class="Slider__Box__Item">
-                    <a href="/view/{{$libro[$i]->id}}"><img src="/Img/Slider/Slider{{$i}}.png"/></a> <!--Recoger el enlace del slider-->
+                    <img src="/Img/Slider/Slider{{$i}}.png"/> <!--Recoger el enlace del slider-->
                 </div>
             @endfor
         </div>

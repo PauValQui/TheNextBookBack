@@ -22,10 +22,10 @@
             <form action="<?php echo e(route('cart.add')); ?>" method="post">
                 <?php echo csrf_field(); ?>
                 <input type="hidden" name="id" value="<?php echo e($libro[0]->id); ?>">
-                <input type="hidden" name="titulo" value="<?php echo e($libro[0]->titulo); ?>">
+                <input type="hidden" name="name" value="<?php echo e($libro[0]->titulo); ?>">
+                <input type="hidden" name="price" value="<?php echo e($libro[0]->precio); ?>">
                 <input type="hidden" name="autor" value="<?php echo e($libro[0]->autor->nombre); ?>">
                 <input type="hidden" name="foto" value="<?php echo e($libro[0]->foto); ?>">
-                <input type="hidden" name="precio" value="<?php echo e($libro[0]->precio); ?>">
                 <input type="hidden" name="quantity" value="1">
                 <input type="submit" name="boton"  class="View__ShopBox__Boton" value="Añadir a la cesta">
             </form>

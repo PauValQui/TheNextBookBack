@@ -21,21 +21,23 @@
         }
 
         &__Search{
-            display: flex;
             height: 40px;
             width: 50%;
             margin: auto;
 
-            .Search__Box{
+            &__Box{
                 display: flex;
-                width: 100%;
-            }
-            .Search__Button{
-                width: 7%;
-                padding: 0;
-
-                img{
+                .Search__Texto{
+                    display: flex;
                     width: 100%;
+                }
+                .Search__Button{
+                    width: 7%;
+                    padding: 0;
+    
+                    img{
+                        width: 100%;
+                    }
                 }
             }
         }

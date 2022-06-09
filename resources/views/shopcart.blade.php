@@ -1,11 +1,10 @@
 @extends('layout/base')
 
 @section('content')
+    <div class="ShopCart__Texto">
+        <p>Cesta</p>
+    </div>
     <div class="ShopCart">
-        <div class="ShopCart__Texto">
-            <p>Cesta</p>
-        </div>
-
         <div class="ShopCart__Box">
             @foreach ($cartItems as $item)  
                 <div class="ShopCart__Box__Item">
@@ -17,14 +16,11 @@
                         <p class="Titulo">{{$item->titulo}}</p>
                         <p class="Autor">{{$item->autor}}</p>
 
-                        <div class="Cantidad">
-                            <form action="{{ route('cart.update') }}" method="POST" class="Cantidad__form">
-                                @csrf
-                                <input type="hidden" name="id" value="{{ $item->id}}" >
-                                <input type="number" name="cantidad" value="{{ $item->cantidad }}"  />
-                                <button type="submit" class="Cantidad__form__Boton">Actualizar</button>
-                            </form>
-                        </div>
+                        <select name="cantidad" class="Cantidad">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                          </select>
 
                         <p class="Precio">{{$item->precio}}</p>
                         <div class="Eliminar">
@@ -40,7 +36,7 @@
         </div>
         <div class="ShopCart__Total">
             <div class="ShopCart__Total__Texto">
-                <p>Total: {{ Cart::getTotal() }}</p>
+                <p>Total: {{ Cart::getTotal() }} €</p>
             </div>
             <div class="ShopCart__Total__Limpiar">
                 <form action="{{ route('cart.clear') }}" method="POST">

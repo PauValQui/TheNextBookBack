@@ -18,20 +18,22 @@
   width: 70%;
 }
 .Header__FirstBox__Search {
-  display: flex;
   height: 40px;
   width: 50%;
   margin: auto;
 }
-.Header__FirstBox__Search .Search__Box {
+.Header__FirstBox__Search__Box {
+  display: flex;
+}
+.Header__FirstBox__Search__Box .Search__Texto {
   display: flex;
   width: 100%;
 }
-.Header__FirstBox__Search .Search__Button {
+.Header__FirstBox__Search__Box .Search__Button {
   width: 7%;
   padding: 0;
 }
-.Header__FirstBox__Search .Search__Button img {
+.Header__FirstBox__Search__Box .Search__Button img {
   width: 100%;
 }
 .Header__FirstBox__ShopCart {

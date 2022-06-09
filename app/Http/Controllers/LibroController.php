@@ -7,7 +7,7 @@ use App\Http\Resources\LibroResource;
 use Illuminate\Http\Request;
 use App\Models\Libro;
 use App\Models\Categoria;
-
+use DB;
 
 class LibroController extends Controller
 {
@@ -45,7 +45,14 @@ class LibroController extends Controller
 
         $categorias = Categoria::all();
 
-        return view('search', ['libro' => $libros, 'longitud' => $longitud, 'info' => $info, 'categorias' => $categorias]);  
+        return view('search', ['libro' => $libros, 'longitud' => $longitud, 'info' => $info, 'categorias' => $categorias]);
+    }
+
+    public static function searchLetras(Request $request){
+
+       /* $libroBuscador = DB::table('libro')->where("titulo","like", "%".$request->texto."%")->get();
+        $longitudBuscador = count($libroBuscador);*/
+        return view('search');
     }
 
     public static function show($info){

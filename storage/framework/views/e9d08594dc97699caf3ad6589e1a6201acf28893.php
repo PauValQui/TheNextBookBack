@@ -14,6 +14,7 @@
     <link href="<?php echo e(asset('css/login.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/checkin.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/contact.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/shopcart.css')); ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -21,10 +22,13 @@
     <div class="Header">
         <div class="Header__FirstBox">
             <a href="/" class="Header__FirstBox__Enlace"><img src='../../Img/Logo.jpeg' alt="logo" id="logo" class="Header__FirstBox__Enlace__Logo" /></a>
-            <div class="Header__FirstBox__Search">
-              <input type="text" class="Search__Box" name='Search__Box' placeholder="¿Qué buscas?"/>
-              <button class="Search__Button"><img src="<?php echo e(asset ('Img/IconosSVG/search.svg')); ?>" /></button>         
-            </div>
+            <form action="<?php echo e(route('header.buscador')); ?>" method="post" class="Header__FirstBox__Search">
+              <?php echo csrf_field(); ?>
+              <div class="Header__FirstBox__Search__Box">
+                <input type="text" class="Search__Texto" name='texto' placeholder="¿Qué buscas?"/>
+                <button class="Search__Button"><img src="<?php echo e(asset ('Img/IconosSVG/search.svg')); ?>" /></button>         
+              </div>
+            </form>
             <div class="Header__FirstBox__ShopCart">
                 <a class="ShopCart__Link" href="/shopcart"><img src="<?php echo e(asset ('Img/IconosSVG/shopCart.png')); ?>" alt=""></a>           
             </div>
@@ -71,5 +75,6 @@
             <p>Copyright 2022</p>
         </div>
     </div>
+    <script src="js/search.js"></script>
 </body>
 </html><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/layout/base.blade.php ENDPATH**/ ?>
