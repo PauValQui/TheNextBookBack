@@ -9,20 +9,20 @@
             <?php $__currentLoopData = $cartItems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>  
                 <div class="ShopCart__Box__Item">
                     <div class="ShopCart__Box__Item__Foto">
-                        <img src="<?php echo e(asset ($item->foto)); ?>" />
+                        <img src="<?php echo e(asset ($item->attributes->foto)); ?>" />
                     </div>
 
                     <div class="ShopCart__Box__Item__Info">
-                        <p class="Titulo"><?php echo e($item->titulo); ?></p>
-                        <p class="Autor"><?php echo e($item->autor); ?></p>
+                        <p class="Titulo"><?php echo e($item->attributes->titulo); ?></p>
+                        <p class="Autor"><?php echo e($item->attributes->autor); ?></p>
 
                         <select name="cantidad" class="Cantidad">
                             <option value="1">1</option>
-                            <option value="2" selected>2</option>
+                            <option value="2">2</option>
                             <option value="3">3</option>
                           </select>
 
-                        <p class="Precio"><?php echo e($item->precio); ?></p>
+                        <p class="Precio"><?php echo e($item->attributes->precio); ?></p>
                         <div class="Eliminar">
                             <form action="<?php echo e(route('cart.remove')); ?>" method="POST">
                                 <?php echo csrf_field(); ?>

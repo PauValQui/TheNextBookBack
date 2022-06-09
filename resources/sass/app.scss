@@ -1,17 +1,8 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables.scss';
+@import 'variables';
 
-//font-awesome
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-
-
-body{
-    margin: 0;
-    padding: 0;
-}
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';

@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\LibroCollection;
 use App\Http\Resources\LibroResource;
 use Illuminate\Http\Request;
 use App\Models\Libro;
 use App\Models\Categoria;
-use DB;
-
+use App\Models\Valoracion;
 class LibroController extends Controller
 {
     protected $libro;
@@ -59,7 +57,11 @@ class LibroController extends Controller
 
         $libros[0] = new LibroResource(Libro::obtenerLibrosPorId($info));
 
-        return view('view', ['libro' => $libros, 'info' => $info]);
+        $valoracion = Valoracion::where('libro_id', $info)
+                                ->get();
+        $longitud = count($valoracion);
+
+        return view('view', ['libro' => $libros, 'info' => $info, 'valoracion' => $valoracion, 'longitud' => $longitud]);
     }
     
 

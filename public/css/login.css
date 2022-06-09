@@ -1,18 +1,18 @@
 .Login {
+  height: 300px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 5%;
-  font-size: 15px;
-  color: #444444;
 }
 .Login__Form {
   width: 40%;
 }
 .Login__Form__Datos {
   font-weight: bold;
+  margin-bottom: 3%;
 }
 .Login__Form__Datos__Box {
-  height: 40px;
+  height: 45px;
   width: 100%;
   background-color: #444444;
   color: #fff;

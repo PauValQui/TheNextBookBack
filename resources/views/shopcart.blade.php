@@ -9,20 +9,20 @@
             @foreach ($cartItems as $item)  
                 <div class="ShopCart__Box__Item">
                     <div class="ShopCart__Box__Item__Foto">
-                        <img src="{{asset ($item->foto)}}" />
+                        <img src="{{asset ($item->attributes->foto)}}" />
                     </div>
 
                     <div class="ShopCart__Box__Item__Info">
-                        <p class="Titulo">{{$item->titulo}}</p>
-                        <p class="Autor">{{$item->autor}}</p>
+                        <p class="Titulo">{{$item->attributes->titulo}}</p>
+                        <p class="Autor">{{$item->attributes->autor}}</p>
 
                         <select name="cantidad" class="Cantidad">
                             <option value="1">1</option>
-                            <option value="2" selected>2</option>
+                            <option value="2">2</option>
                             <option value="3">3</option>
                           </select>
 
-                        <p class="Precio">{{$item->precio}}</p>
+                        <p class="Precio">{{$item->attributes->precio}}</p>
                         <div class="Eliminar">
                             <form action="{{ route('cart.remove') }}" method="POST">
                                 @csrf

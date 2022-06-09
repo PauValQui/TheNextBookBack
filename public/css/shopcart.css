@@ -8,6 +8,8 @@
 
 .ShopCart {
   display: flex;
+  margin-bottom: 5%;
+  margin-left: 5%;
 }
 .ShopCart__Box {
   width: 75%;
@@ -18,20 +20,27 @@
   display: flex;
   width: 100%;
   color: #454142;
+  margin-bottom: 2%;
 }
 .ShopCart__Box__Item__Foto {
   width: 20%;
 }
-.ShopCart__Box__Item__Info .Titulo {
+.ShopCart__Box__Item__Foto img {
   width: 80%;
-  font-size: 24px;
+}
+.ShopCart__Box__Item__Info {
+  width: 80%;
+}
+.ShopCart__Box__Item__Info .Titulo {
+  font-size: 25px;
 }
 .ShopCart__Box__Item__Info .Autor {
-  width: 80%;
   font-size: 18px;
 }
+.ShopCart__Box__Item__Info .Cantidad {
+  margin-bottom: 2%;
+}
 .ShopCart__Box__Item__Info .Precio {
-  width: 20%;
   font-size: 18px;
 }
 .ShopCart__Box__Item__Info .Eliminar__Boton {
@@ -43,12 +52,12 @@
   width: 20%;
   height: 200px;
   background-color: #B5C78B;
-  margin-bottom: 5%;
 }
 .ShopCart__Total__Texto {
   font-size: 35px;
   color: #454142;
-  margin-left: 5%;
+  margin-left: 10%;
+  margin-top: 10%;
 }
 .ShopCart__Total__Limpiar {
   margin-left: 5%;
@@ -58,4 +67,6 @@
   color: #B5C78B;
   height: 30px;
   width: 75%;
+  margin-left: 8%;
+  margin-top: 10%;
 }

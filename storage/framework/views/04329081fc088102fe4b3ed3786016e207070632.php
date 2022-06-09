@@ -2,9 +2,8 @@
 
 <?php $__env->startSection('content'); ?>
     <div class="Buscador">
-        <?php for($i=0; $i<$longitud; $i++): ?>
             
-                    
+        <?php for($i=0; $i<$longitud; $i++): ?>
             <?php if($info == $libro[$i]->autor->nombre): ?>
                 <?php for($j=0; $j < $longitud; $j++): ?>{
                     <div class="Buscador__BoxLibros">
@@ -23,6 +22,7 @@
                     </div>
                 }
                 <?php endfor; ?>
+            
                 
             <?php elseif($info == 'libros'): ?>
                     <?php for($i=0; $i<$longitud; $i++): ?>
@@ -48,7 +48,8 @@
                         </div>
                     <?php endfor; ?>
             <?php endif; ?>
-
+        <?php endfor; ?>  
+            
 
             <?php switch($info):
                     case (1): ?>
@@ -93,7 +94,7 @@
                         <?php endfor; ?>
                     <?php break; ?>
             <?php endswitch; ?>
-        <?php endfor; ?>
+        
     </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout/base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/search.blade.php ENDPATH**/ ?>

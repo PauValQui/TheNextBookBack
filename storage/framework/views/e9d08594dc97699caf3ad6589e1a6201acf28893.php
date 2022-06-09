@@ -54,6 +54,7 @@
 
     <!--Contenido-->
       <?php echo $__env->yieldContent('content'); ?>
+      
     <!--Footer-->
     <div class="Footer">
         <div class="Footer__Box">
@@ -61,14 +62,6 @@
             <div class='Footer__Box__Contact'>
                 <p>¿Tienes alguna duda?</p>
                 <a href='/contact'>Contactanos</a>
-            </div>
-            <div class='Footer__Box__RRSS'>
-                <p>Siguenos en nuestras redes sociales:</p>
-                <div class='RRSS__BoxIcon'>
-                    <i class="fa-brands fa-instagram fa-2x"></i>
-                    <i class="fa-brands fa-facebook fa-2x"></i>
-                    <i class="fa-brands fa-goodreads-g fa-2x"></i>
-                </div>
             </div>
         </div>
         <div class="Footer__Copyright">

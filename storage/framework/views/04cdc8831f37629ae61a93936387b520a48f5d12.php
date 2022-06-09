@@ -24,6 +24,8 @@
                 <input type="hidden" name="id" value="<?php echo e($libro[0]->id); ?>">
                 <input type="hidden" name="name" value="<?php echo e($libro[0]->titulo); ?>">
                 <input type="hidden" name="price" value="<?php echo e($libro[0]->precio); ?>">
+                <input type="hidden" name="titulo" value="<?php echo e($libro[0]->titulo); ?>">
+                <input type="hidden" name="precio" value="<?php echo e($libro[0]->precio); ?>">
                 <input type="hidden" name="autor" value="<?php echo e($libro[0]->autor->nombre); ?>">
                 <input type="hidden" name="foto" value="<?php echo e($libro[0]->foto); ?>">
                 <input type="hidden" name="quantity" value="1">
@@ -73,8 +75,30 @@ unset($__errorArgs, $__bag); ?>
             <input type="submit" value="Enviar" class="Valuations__Formulario__Button"/>
         </form>
 
-        <!--Bucle valoraciones de este libro
-        -->
+        <!--Bucle valoraciones de este libro-->
+
+        <?php if($longitud != 0): ?>{
+            <div class="ViewValuations">
+                <?php for($j=0; $j < $longitud; $j++): ?>{
+                    <div class="Buscador__BoxLibros">
+                        <?php if($libro[$j]->autor->nombre == $libro[$i]->autor->nombre): ?>
+                            <div class="Buscador__BoxLibros__Libro">
+                                <div class="Buscador__BoxLibros__Libro__Img">
+                                    <a href="/view/<?php echo e($libro[$j]->id); ?>"><img src="<?php echo e(asset ($libro[$j]->foto)); ?>" /></a>
+                                </div>
+                                <a class="Buscador__BoxLibros__Libro__Titulo" href="/view/<?php echo e($libro[$j]->id); ?>"><?php echo e($libro[$j]->titulo); ?></a>
+                                <a class="Buscador__BoxLibros__Libro__Autor" href="/search/<?php echo e($libro[$j]->autor->id); ?>"><?php echo e($libro[$j]->autor->nombre); ?></a>
+                                <div class="Buscador__BoxLibros__Libro__BoxCategoria">
+                                    <a href="/search/<?php echo e($libro[$j]->categoria->tipo); ?>"><?php echo e($libro[$j]->categoria->tipo); ?></a>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                }
+                <?php endfor; ?>
+            </div>
+        }
+        <?php endif; ?>
     </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout/base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp1\htdocs\TheNextBookBack\resources\views/view.blade.php ENDPATH**/ ?>

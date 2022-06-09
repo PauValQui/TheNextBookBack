@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="Buscador">
-        @for ($i=0; $i<$longitud; $i++)
             {{--@if(count($libroBuscador) >=1)
                 @for($i=0; $i <count($libroBuscador); $i++)
                     <div class="Buscador__BoxLibros">
@@ -19,7 +18,7 @@
                     </div>
                 @endfor
             @endif;--}}
-                    
+        @for ($i=0; $i<$longitud; $i++)
             @if($info == $libro[$i]->autor->nombre)
                 @for ($j=0; $j < $longitud; $j++){
                     <div class="Buscador__BoxLibros">
@@ -38,6 +37,7 @@
                     </div>
                 }
                 @endfor
+            
                 
             @elseif($info == 'libros')
                     @for ($i=0; $i<$longitud; $i++)
@@ -63,7 +63,8 @@
                         </div>
                     @endfor
             @endif
-
+        @endfor  
+            
 
             @switch($info)
                     @case(1)
@@ -108,6 +109,6 @@
                         @endfor
                     @break
             @endswitch
-        @endfor
+        
     </div>
 @endsection

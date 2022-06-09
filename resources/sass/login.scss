@@ -1,9 +1,8 @@
 .Login{
-    display:flex;
+    height: 300px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 5%;
-    font-size:15px;
-    color:#444444;
 
     &__Form{
         width:40%;
@@ -11,9 +10,10 @@
         &__Datos{
             
             font-weight: bold;
+            margin-bottom: 3%;
 
             &__Box{
-                height: 40px;
+                height: 45px;
                 width: 100%;
                 background-color:#444444;
                 color:#fff;

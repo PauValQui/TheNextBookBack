@@ -15,9 +15,11 @@ class ValoracionController extends Controller
     }
 
     public function index($libro_id)
-    {
-        $valoracion = $this->valoracion->obtenerValoracionPorLibro($libro_id); //retornamos un listado con todos los libros de la bd, para mostrarlos en la vista.
-        return view('valoracion.lista', ['valoracion' => $valoracion]);
+    {  
+        $valoracion = Valoracion::where('libro_id', $libro_id)
+                                ->get();
+        $longitud = count($valoracion);
+        return view('view', ['valoracion' => $valoracion, 'longitud' => $longitud]);
     }
 
     public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion                                        
@@ -38,9 +40,11 @@ class ValoracionController extends Controller
         
 
         $valoracion->save();
-        return back()->with('success', 'Valoracion enviada.');
+        return back();
 
     }
+
+
     
 
     /*public function show($libro_id){

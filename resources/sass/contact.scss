@@ -1,20 +1,8 @@
 .Contact{
     display: flex;
     justify-content: space-around;
-    height: 200px;
-    &__Box{
-
-        &__RRSS{
-            color: #B5C78B;
-        }
-        &__Icons{
-            width: 100%;
-            i{
-                width: 25%;
-                color: #B5C78B;
-            }
-        }
-    }
+    height: 100px;
+    margin: 5%;
 
     &__Email{
         color: #B5C78B;

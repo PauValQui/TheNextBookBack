@@ -32,11 +32,13 @@
             color:#B5C78B;
 
             .RRSS_BoxIcon{
-                height: 5%;
+                
 
                 .BoxIcon__Icon{
-                    i{
-                        width: 20%;
+                    width: 50%;
+                    height: 30px;
+                    img, svg{
+                        width: 5%;
                     }
                 }
             }

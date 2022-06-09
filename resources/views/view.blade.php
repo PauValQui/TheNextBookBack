@@ -24,6 +24,8 @@
                 <input type="hidden" name="id" value="{{$libro[0]->id}}">
                 <input type="hidden" name="name" value="{{$libro[0]->titulo}}">
                 <input type="hidden" name="price" value="{{$libro[0]->precio}}">
+                <input type="hidden" name="titulo" value="{{$libro[0]->titulo}}">
+                <input type="hidden" name="precio" value="{{$libro[0]->precio}}">
                 <input type="hidden" name="autor" value="{{$libro[0]->autor->nombre}}">
                 <input type="hidden" name="foto" value="{{$libro[0]->foto}}">
                 <input type="hidden" name="quantity" value="1">
@@ -59,7 +61,29 @@
             <input type="submit" value="Enviar" class="Valuations__Formulario__Button"/>
         </form>
 
-        <!--Bucle valoraciones de este libro
-        -->
+        <!--Bucle valoraciones de este libro-->
+
+        @if($longitud != 0){
+            <div class="ViewValuations">
+                @for ($j=0; $j < $longitud; $j++){
+                    <div class="Buscador__BoxLibros">
+                        @if ($libro[$j]->autor->nombre == $libro[$i]->autor->nombre)
+                            <div class="Buscador__BoxLibros__Libro">
+                                <div class="Buscador__BoxLibros__Libro__Img">
+                                    <a href="/view/{{$libro[$j]->id}}"><img src="{{ asset ($libro[$j]->foto) }}" /></a>
+                                </div>
+                                <a class="Buscador__BoxLibros__Libro__Titulo" href="/view/{{$libro[$j]->id}}">{{$libro[$j]->titulo}}</a>
+                                <a class="Buscador__BoxLibros__Libro__Autor" href="/search/{{$libro[$j]->autor->id}}">{{$libro[$j]->autor->nombre}}</a>
+                                <div class="Buscador__BoxLibros__Libro__BoxCategoria">
+                                    <a href="/search/{{$libro[$j]->categoria->tipo}}">{{$libro[$j]->categoria->tipo}}</a>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                }
+                @endfor
+            </div>
+        }
+        @endif
     </div>
 @endsection

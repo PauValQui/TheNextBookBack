@@ -14,7 +14,11 @@ class Valoracion extends Model
     protected $fillable = ['titulo', 'puntuacion', 'comentario','libro_id'];
     protected $hidden = ['id'];
 
-    public function obtenerValoracionesPorLibro($libro_id)
+    public static function obtenerValoraciones(){
+        return Valoracion::all();
+    }
+
+    public static function obtenerValoracionesPorLibro($libro_id)
     {
         return Valoracion::find($libro_id);
     }

@@ -12,7 +12,7 @@ class CartController extends Controller
     public function cart()  {
 
         $cartItems = \Cart::getContent();
-        // dd($cartItems);
+        //dd($cartItems);
         return view('shopcart', ['cartItems' => $cartItems]);
 
     }
@@ -20,19 +20,21 @@ class CartController extends Controller
 
     public function add(Request $request)
     {
-        \Cart::add([
+        $cart = \Cart::add([
                 'id' => $request->id,
-                'price' => $request->precio,
+                'price' => $request->price,
                 'quantity' => $request->quantity,
-                'name' => $request->titulo,
+                'name' => $request->name,
                 'attributes' => array(
+                    'titulo' => $request->titulo,
+                    'precio' => $request->precio,
                     'autor' => $request->autor,
                     'foto' => $request->foto,
                 ),
                 
         ]);
 
-        return redirect()->route('cart.view');
+        return redirect()->route('cart.view', ['Cart' => $cart]);
 
     }
 
