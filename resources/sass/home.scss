@@ -138,3 +138,84 @@
         }
     }
 }
+
+@media(min-width:320px) and (max-width:767px){
+    .Slider{
+        &__Box{
+            &__Item{
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+    
+            }
+        }
+    }
+
+    .Novedades{
+        &__BoxTitulo{
+            font-size: 20px;
+            p{
+                margin-top: 3%;
+            }
+        }
+    
+        &__BoxLibros{
+                flex-direction: column;
+    
+            &__Libro{
+                margin-bottom: 2%;
+            }
+        }
+    }
+
+    .Autores{
+        &__Titulo{
+            font-size: 20px;
+            p{
+                margin-top: 3%;
+            }
+        }
+    
+        &__Box{
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    .Slider{
+        &__Box{
+            &__Item{
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+    
+            }
+        }
+    }
+    .Novedades{
+    
+        &__BoxTitulo{
+            font-size: 20px;
+            p{
+                margin-top: 3%;
+            }
+        }
+    
+        &__BoxLibros{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+    
+            &__Libro{
+                width: 275px;
+                margin-bottom: 2%;
+            }
+        }
+    }
+
+    
+}

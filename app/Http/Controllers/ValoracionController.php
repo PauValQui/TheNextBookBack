@@ -14,7 +14,7 @@ class ValoracionController extends Controller
         $this->valoracion = $valoracion;
     }
 
-    public function index($libro_id)
+    public function index($libro_id) //funcion que me devuelve las valoraciones de un libro especifico
     {  
         $valoracion = Valoracion::where('libro_id', $libro_id)
                                 ->get();
@@ -22,8 +22,8 @@ class ValoracionController extends Controller
         return view('view', ['valoracion' => $valoracion, 'longitud' => $longitud]);
     }
 
-    public function store(Request $request) //     Este metodo crea un nuevo libro, $request tiene toda la informacion                                        
-     //       mandada desde un formulario.
+    public function store(Request $request) //     Este metodo crea una nueva valoracion, $request tiene toda la informacion                                        
+                                             //       mandada desde un formulario.
     {
         $request->validate([
             'titulo' => 'required',

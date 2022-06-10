@@ -85,3 +85,32 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .Header__FirstBox__Enlace {
+    width: 35%;
+  }
+  .Header__FirstBox__Search__Box .Search__Texto {
+    width: 60%;
+  }
+  .Header__FirstBox__ShopCart {
+    margin-top: 8%;
+  }
+  .Header__NavBar__ul {
+    width: 75%;
+  }
+  .Header__NavBar__BotonInicio {
+    width: 25%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Header__FirstBox__ShopCart {
+    margin-top: 5%;
+  }
+  .Header__NavBar__ul {
+    width: 85%;
+  }
+  .Header__NavBar__BotonInicio {
+    width: 15%;
+  }
+}

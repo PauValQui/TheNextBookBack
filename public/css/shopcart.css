@@ -54,7 +54,7 @@
   background-color: #B5C78B;
 }
 .ShopCart__Total__Texto {
-  font-size: 35px;
+  font-size: 30px;
   color: #454142;
   margin-left: 10%;
   margin-top: 10%;
@@ -69,4 +69,55 @@
   width: 75%;
   margin-left: 8%;
   margin-top: 10%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .ShopCart__Texto {
+    font-size: 30px;
+    width: 80%;
+  }
+
+  .ShopCart__Box {
+    width: 65%;
+  }
+  .ShopCart__Box__Item__Foto {
+    width: 50%;
+  }
+  .ShopCart__Box__Item__Info {
+    width: 100%;
+  }
+  .ShopCart__Box__Item__Info .Titulo {
+    font-size: 20px;
+  }
+  .ShopCart__Box__Item__Info .Autor {
+    font-size: 16px;
+  }
+  .ShopCart__Box__Item__Info .Cantidad {
+    margin-bottom: 2%;
+  }
+  .ShopCart__Box__Item__Info .Precio {
+    font-size: 16px;
+  }
+  .ShopCart__Total {
+    width: 35%;
+  }
+  .ShopCart__Total__Texto {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ShopCart__Texto {
+    font-size: 30px;
+    width: 75%;
+  }
+
+  .ShopCart__Box {
+    width: 65%;
+  }
+  .ShopCart__Box__Item__Foto {
+    width: 50%;
+  }
+  .ShopCart__Total {
+    width: 30%;
+  }
 }

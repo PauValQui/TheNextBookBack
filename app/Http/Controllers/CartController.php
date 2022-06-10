@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 
 class CartController extends Controller
-{
+{   //Cart es una libreria especifica que viene con sus funciones implementadas, las cuales yo he editado a mi gusto.
 
     public function cart()  {
 

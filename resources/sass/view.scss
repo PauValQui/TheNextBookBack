@@ -131,3 +131,118 @@
         }
     }
 }
+
+@media(min-width:320px) and (max-width:767px){
+    .View{
+        display: block;
+    
+        &__BoxImg{
+            width: 75%;
+            margin-left: 14%;
+        }
+    
+        &__BoxDescription{
+            width: 100%;
+            text-align: center;
+            &__Categoria{
+                background-color: #454142;
+                width: 25%;
+                margin-left: 5%;
+            }
+            &__Sinopsis{
+               margin: 2%;
+            }
+        }
+    
+        &__ShopBox{
+            height: 400px;
+        }
+    }
+    
+    .Valuations{
+
+        &__Formulario{
+            width: 75%;
+            height: 450px;
+            margin-bottom: 3%;
+            
+            &__Label{
+                width:65%;
+            }
+    
+            &__Input{
+                height: 12%;
+            }
+    
+            &__Textarea{
+                height: 30%;
+            }
+            &__Button{
+                height: 10%;  
+            }
+        }
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    .View{
+        align-items: unset;
+        margin-top: 3%;
+        &__BoxImg{
+            width: 75%;
+            margin-left: 0;
+        }
+    
+        &__BoxDescription{
+            width: 100%;
+            text-align: center;
+            &__Categoria{
+                background-color: #454142;
+                width: 25%;
+                margin-left: 5%;
+            }
+            &__Sinopsis{
+               margin: 2%;
+            }
+        }
+    
+        
+    &__ShopBox{
+        &__Titulo{
+            font-size: 30px;
+        }
+        &__Precio{
+            font-size: 25px;
+        }
+        &__Boton{
+            width: 100%;
+            height: 100%;
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+    }
+    .Valuations{
+
+        &__Formulario{
+            width: 75%;
+            height: 450px;
+            margin-bottom: 3%;
+            
+            &__Label{
+                width:65%;
+            }
+    
+            &__Input{
+                height: 12%;
+            }
+    
+            &__Textarea{
+                height: 30%;
+            }
+            &__Button{
+                height: 10%;  
+            }
+        }
+    }
+}

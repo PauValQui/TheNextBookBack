@@ -2,7 +2,7 @@
 
 @section('content')
     <div>
-        <div class="Login">
+        <div class="Login"><!-- formulario de logeo en el que controlo los requisitos que he impuesto -->
             <form class="Login__Form" method="POST" action="{{route ('login')}}">
                 @csrf
                 <div class="Login__Form__Datos">

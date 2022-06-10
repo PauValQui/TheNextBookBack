@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
     <div>
-        <div class="Login">
+        <div class="Login"><!-- formulario de logeo en el que controlo los requisitos que he impuesto -->
             <form class="Login__Form" method="POST" action="<?php echo e(route ('login')); ?>">
                 <?php echo csrf_field(); ?>
                 <div class="Login__Form__Datos">

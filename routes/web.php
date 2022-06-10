@@ -29,14 +29,6 @@ Route::get('/view/{info}', [LibroController::class, 'show']);
 
 Route::post('/view', [ValoracionController::class, 'store']) -> name('valoracion.store');
 
-//Route::get('/login', function(){    return view('login');});
-
-//Route::post('login', [UsuarioController::class, 'login']) -> name('login');
-
-//Route::get('/checkin', function(){return view('checkin');});
-
-//Route::post('/checkin', [UsuarioController::class, 'store'])->name('checkin.store');
-
 Route::get('/shopcart', [CartController::class,'cart'])->name('cart.view');
 
 Route::post('cart', [CartController::class,'add'])->name('cart.add');
@@ -49,3 +41,11 @@ Route::get('/contact', function(){return view('contact');});
 
 
 Auth::routes();
+
+//Route::get('/login', function(){    return view('login');});
+
+//Route::post('login', [UsuarioController::class, 'login']) -> name('login');
+
+//Route::get('/checkin', function(){return view('checkin');});
+
+//Route::post('/checkin', [UsuarioController::class, 'store'])->name('checkin.store');

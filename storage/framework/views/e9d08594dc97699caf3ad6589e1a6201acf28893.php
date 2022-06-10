@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Next Book</title>
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/header.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/footer.css')); ?>" rel="stylesheet">
@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    <!--Header-->
+    <!--Header estatico-->
     <div class="Header">
         <div class="Header__FirstBox">
             <a href="/" class="Header__FirstBox__Enlace"><img src='../../Img/Logo.jpeg' alt="logo" id="logo" class="Header__FirstBox__Enlace__Logo" /></a>
@@ -55,7 +55,7 @@
     <!--Contenido-->
       <?php echo $__env->yieldContent('content'); ?>
       
-    <!--Footer-->
+    <!--Footer estatico-->
     <div class="Footer">
         <div class="Footer__Box">
             <img src='../../Img/Logo.jpeg' alt='Logo' id='Logo' class='Footer__Box__Logo'/>

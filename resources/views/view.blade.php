@@ -1,7 +1,7 @@
 @extends('layout/base')
 
 @section('content')
-    <div class="View">
+    <div class="View"><!--A esta vista le doy le mando un libro especificado por su id-->
         <div class="View__BoxImg">
             <img src="{{asset ($libro[0]->foto)}}" />
         </div>
@@ -19,7 +19,7 @@
         <div class="View__ShopBox">
             <p class="View__ShopBox__Titulo">Precio:</p>
             <p class="View__ShopBox__Precio">{{$libro[0]->precio}}</p>
-            <form action="{{ route('cart.add') }}" method="post">
+            <form action="{{ route('cart.add') }}" method="post"> <!-- En el boton añadir a la cesta mando la informacion oculta a un metodo para crear un nuevo item en cart -->
                 @csrf
                 <input type="hidden" name="id" value="{{$libro[0]->id}}">
                 <input type="hidden" name="name" value="{{$libro[0]->titulo}}">
@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="Valuations">
+    <div class="Valuations"><!-- En el formulario de valoraciones recojo la información y la introduzco en la tabla de valoraciones de mi base de datos -->
         <form action="{{ route('valoracion.store') }}" method="POST" class="Valuations__Formulario"> 
             @csrf
             <label class="Valuations__Formulario__Label">Titulo de la valoración:</label>
@@ -61,7 +61,7 @@
             <input type="submit" value="Enviar" class="Valuations__Formulario__Button"/>
         </form>
 
-        <!--Bucle valoraciones de este libro-->
+        <!--Bucle valoraciones de este libro en el que muestro las valoraciones que hay relacionadas con este libro-->
 
         @if($longitud != 0){
             <div class="ViewValuations">

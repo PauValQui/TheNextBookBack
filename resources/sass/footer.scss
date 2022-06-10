@@ -27,27 +27,42 @@
                 color:#B5C78B;
             }
         }
-
-        &__RRSS{
-            color:#B5C78B;
-
-            .RRSS_BoxIcon{
-                
-
-                .BoxIcon__Icon{
-                    width: 50%;
-                    height: 30px;
-                    img, svg{
-                        width: 5%;
-                    }
-                }
-            }
-        }
     }
 
     &__Copyright{
         height: 10%;
         text-align: center;
         color: #B5C78B;
+    }
+}
+
+@media(min-width:320px) and (max-width:767px){
+    .Footer{
+        &__Box{
+            &__Logo{
+                width: 20%;
+            }
+            &__Contact{
+                font-size: 12px;
+            }
+        }
+        
+        &__Copyright{
+            font-size: 12px;
+        }
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    .Footer{
+        &__Box{
+            &__Contact{
+                font-size: 12px;
+            }
+        }
+        
+        &__Copyright{
+            font-size: 12px;
+        }
     }
 }

@@ -1,8 +1,6 @@
 .Buscador{
     margin-bottom: 2%;
-    &__BoxLibros{
-        display:block;
-        
+    &__BoxLibros{    
         &__Libro{
             width: 250px;
             height: 450px;
@@ -56,17 +54,14 @@
     }
 
     &__BoxAutores{
-        display:flex;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 2%;
 
         &__Autor{
             width: 250px;
-            height: 400px;
+            height: 450px;
             background-color: #B5C78B;
-            margin-bottom: 2%;
-            display: grid;
+            display: inline-grid;
+            margin-top: 2%;
+            margin-left: 4%;
 
             &__Img{
                 width: 215px;

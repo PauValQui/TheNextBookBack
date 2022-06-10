@@ -103,3 +103,53 @@
 
     
 }
+
+@media(min-width:320px) and (max-width:767px){
+    .Header{
+        &__FirstBox{
+            &__Enlace{
+                width: 35%;
+            }
+            &__Search{
+                &__Box{
+                    .Search__Texto{
+                        width: 60%;
+                    }
+                }
+            }
+
+            &__ShopCart{
+                margin-top: 8%;
+            }
+        }
+
+        &__NavBar{
+            &__ul{
+                width: 75%;
+            }
+            &__BotonInicio{
+                width: 25%;
+            }
+        }
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px){
+    .Header{
+        &__FirstBox{
+
+            &__ShopCart{
+                margin-top: 5%;
+            }
+        }
+
+        &__NavBar{
+            &__ul{
+                width: 85%;
+            }
+            &__BotonInicio{
+                width: 15%;
+            }
+        }
+    }
+}

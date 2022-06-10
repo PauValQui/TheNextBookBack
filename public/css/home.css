@@ -116,3 +116,55 @@
   margin-right: 7%;
   text-decoration: none;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .Slider__Box__Item img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .Novedades__BoxTitulo {
+    font-size: 20px;
+  }
+  .Novedades__BoxTitulo p {
+    margin-top: 3%;
+  }
+  .Novedades__BoxLibros {
+    flex-direction: column;
+  }
+  .Novedades__BoxLibros__Libro {
+    margin-bottom: 2%;
+  }
+
+  .Autores__Titulo {
+    font-size: 20px;
+  }
+  .Autores__Titulo p {
+    margin-top: 3%;
+  }
+  .Autores__Box {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Slider__Box__Item img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .Novedades__BoxTitulo {
+    font-size: 20px;
+  }
+  .Novedades__BoxTitulo p {
+    margin-top: 3%;
+  }
+  .Novedades__BoxLibros {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Novedades__BoxLibros__Libro {
+    width: 275px;
+    margin-bottom: 2%;
+  }
+}

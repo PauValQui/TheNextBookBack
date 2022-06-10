@@ -1,7 +1,7 @@
 @extends('layout/base')
 
 @section('content')
-    <div class="Check">
+    <div class="Check"><!-- formulario de registro en el que controlo los requisitos que he impuesto -->
         <form class="Check__Form" method="POST" action="{{ route('register') }}">
             @csrf
             <div class="Check__Form__Datos">

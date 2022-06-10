@@ -5,7 +5,7 @@
         <div class="Slider__Box">
             <?php for($i=1; $i <= 5; $i++): ?>
                 <div class="Slider__Box__Item">
-                    <img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/> <!--Recoger el enlace del slider-->
+                    <img src="/Img/Slider/Slider<?php echo e($i); ?>.png"/> <!--llamar a la imagen del slider-->
                 </div>
             <?php endfor; ?>
         </div>
@@ -15,10 +15,11 @@
             <p>--Últimas Novedades--</p>
         </div>
         <div class="Novedades__BoxLibros">
-            <?php for($i=0; $i<4; $i++): ?>
+            <?php for($i=0; $i<4; $i++): ?> <!--Bucle limitado a 4 porque solo quiero mostrar los 4 ultimos libros incluidos en mi base de datos-->
                 <div class="Novedades__BoxLibros__Libro">
                     <div class="Novedades__BoxLibros__Libro__Img">
-                        <a href="/view/<?php echo e($libro[$i]->id); ?>"><img src="<?php echo e($libro[$i]->foto); ?>" /></a>
+                        <a href="/view/<?php echo e($libro[$i]->id); ?>"><img src="<?php echo e($libro[$i]->foto); ?>" /></a> <!--Desde el controlador mando una lista de libros con atributos especificos 
+                                                                                                    que voy a mostrar.-->
                     </div>  
                     <a class="Novedades__BoxLibros__Libro__Titulo" href="/view/<?php echo e($libro[$i]->id); ?>"><?php echo e($libro[$i]->titulo); ?></a>
                     <a class="Novedades__BoxLibros__Libro__Autor" href="/search/<?php echo e($libro[$i]->autor->id); ?>"><?php echo e($libro[$i]->autor->nombre); ?></a>
@@ -35,7 +36,7 @@
             <p>--Autores--</p>
         </div>
         <div class="Autores__Box">
-            <?php for($i=0; $i<3; $i++): ?>
+            <?php for($i=0; $i<3; $i++): ?>  <!--Bucle limitado a 3 porque solo quiero mostrar los 3 primeros autores incluidos en mi base de datos-->
                 <div class="Autores__Box__Autor">
                     <div class="Autores__Box__Autor__Img">
                         <a href="/search/<?php echo e($libro[$i]->autor->id); ?>"><img src="<?php echo e($libro[$i]->autor->foto); ?>" /></a>

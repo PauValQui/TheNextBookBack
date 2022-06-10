@@ -25,18 +25,28 @@
   text-decoration: none;
   color: #B5C78B;
 }
-.Footer__Box__RRSS {
-  color: #B5C78B;
-}
-.Footer__Box__RRSS .RRSS_BoxIcon .BoxIcon__Icon {
-  width: 50%;
-  height: 30px;
-}
-.Footer__Box__RRSS .RRSS_BoxIcon .BoxIcon__Icon img, .Footer__Box__RRSS .RRSS_BoxIcon .BoxIcon__Icon svg {
-  width: 5%;
-}
 .Footer__Copyright {
   height: 10%;
   text-align: center;
   color: #B5C78B;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .Footer__Box__Logo {
+    width: 20%;
+  }
+  .Footer__Box__Contact {
+    font-size: 12px;
+  }
+  .Footer__Copyright {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Footer__Box__Contact {
+    font-size: 12px;
+  }
+  .Footer__Copyright {
+    font-size: 12px;
+  }
 }

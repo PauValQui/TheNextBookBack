@@ -13,7 +13,7 @@ class AutorResource extends JsonResource
      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
      */
     public function toArray($request)
-    {
+    {   //Recurso creado para la obtencion de un autor con los valores especificos que necesito para mostrar en mi aplicacion
         return [
             'id' => $this->id,
             'nombre' => $this->nombre,
